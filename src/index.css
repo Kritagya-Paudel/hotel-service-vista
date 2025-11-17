@@ -1,0 +1,279 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 218 33% 97%; /* #F7F9FB */
+    --foreground: 94 8% 43%; /* #687864 */
+
+    --card: 218 33% 97%; /* #F7F9FB */
+    --card-foreground: 94 8% 43%; /* #687864 */
+
+    --popover: 218 33% 97%; /* #F7F9FB */
+    --popover-foreground: 94 8% 43%; /* #687864 */
+
+    --primary: 207 48% 36%; /* #31708E */
+    --primary-foreground: 218 33% 97%; /* #F7F9FB */
+
+    --secondary: 208 35% 50%; /* #5085A5 */
+    --secondary-foreground: 218 33% 97%; /* #F7F9FB */
+
+    --muted: 202 59% 72%; /* #8FC1E3 */
+    --muted-foreground: 94 8% 43%; /* #687864 */
+
+    --accent: 202 59% 72%; /* #8FC1E3 */
+    --accent-foreground: 207 48% 36%; /* #31708E */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 218 33% 97%;
+
+    --border: 202 59% 72%; /* #8FC1E3 */
+    --input: 202 59% 72%; /* #8FC1E3 */
+    --ring: 207 48% 36%; /* #31708E */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 218 33% 97%; /* #F7F9FB */
+    --sidebar-foreground: 94 8% 43%; /* #687864 */
+    --sidebar-primary: 207 48% 36%; /* #31708E */
+    --sidebar-primary-foreground: 218 33% 97%; /* #F7F9FB */
+    --sidebar-accent: 202 59% 72%; /* #8FC1E3 */
+    --sidebar-accent-foreground: 207 48% 36%; /* #31708E */
+    --sidebar-border: 202 59% 72%; /* #8FC1E3 */
+    --sidebar-ring: 207 48% 36%; /* #31708E */
+
+    --forest-green: 79 7% 43%; /* #687864 */
+    --ocean-blue: 200 45% 35%; /* #31708E */
+    --steel-blue: 201 38% 48%; /* #5085A5 */
+    --sky-blue: 202 70% 72%; /* #8FC1E3 */
+    --light-blue: 220 20% 98%; /* #F7F9FB */
+
+  }
+
+  .dark {
+    --background: 207 48% 20%;
+    --foreground: 218 33% 97%;
+
+    --card: 207 48% 20%;
+    --card-foreground: 218 33% 97%;
+
+    --popover: 207 48% 20%;
+    --popover-foreground: 218 33% 97%;
+
+    --primary: 218 33% 97%;
+    --primary-foreground: 207 48% 20%;
+
+    --secondary: 208 35% 30%;
+    --secondary-foreground: 218 33% 97%;
+
+    --muted: 207 48% 25%;
+    --muted-foreground: 202 59% 72%;
+
+    --accent: 207 48% 25%;
+    --accent-foreground: 218 33% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 218 33% 97%;
+
+    --border: 207 48% 25%;
+    --input: 207 48% 25%;
+    --ring: 202 59% 72%;
+    --sidebar-background: 207 48% 15%;
+    --sidebar-foreground: 218 33% 97%;
+    --sidebar-primary: 202 59% 72%;
+    --sidebar-primary-foreground: 207 48% 15%;
+    --sidebar-accent: 207 48% 25%;
+    --sidebar-accent-foreground: 218 33% 97%;
+    --sidebar-border: 207 48% 25%;
+    --sidebar-ring: 202 59% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Responsive styles for Rooms Section - Inverted behavior */
+/* Desktop shows single column (mobile-like layout) */
+@media screen and (max-width: 479px) {
+  .DTYucH {
+    @apply pb-7;
+  }
+  .rAczqT {
+    @apply w-full;
+  }
+  .mbLkWu {
+    @apply tracking-[-0.025rem];
+  }
+  .mgAunl {
+    @apply aspect-[2/2.5] w-full;
+  }
+  .NtjusO {
+    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
+  }
+  .EbwMWQ {
+    @apply w-full;
+  }
+  .vjOMKl {
+    @apply aspect-[2/2.5] w-full;
+  }
+  .zmUMVH {
+    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
+  }
+  .pLsiaO {
+    @apply w-full;
+  }
+  .nPpNgi {
+    @apply aspect-[2/2.5] w-full;
+  }
+  .UHeaaL {
+    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
+  }
+  .udlPPt {
+    @apply w-full;
+  }
+  .EPUaXE {
+    @apply aspect-[2/2.5] w-full;
+  }
+  .GihdOD {
+    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
+  }
+  .qxIbvf {
+    @apply w-full;
+  }
+}
+@media screen and (max-width: 991px) {
+  .NjcSxy {
+    @apply pb-0;
+  }
+  .rAczqT {
+    @apply w-4/5;
+  }
+  .cAIVPu {
+    @apply gap-y-20 grid-cols-[1fr];
+  }
+  .mgAunl {
+    @apply aspect-[3/2] w-full;
+  }
+  .wvwipb {
+    @apply text-[15.2px];
+  }
+  .MLXtMh {
+    @apply text-[15.2px];
+  }
+  .VMBjMo {
+    @apply text-[15.2px];
+  }
+  .EbwMWQ {
+    @apply w-full;
+  }
+  .vjOMKl {
+    @apply aspect-[3/2] w-full;
+  }
+  .aJeoqq {
+    @apply text-[15.2px];
+  }
+  .ZWlTgj {
+    @apply text-[15.2px];
+  }
+  .owbQjJ {
+    @apply text-[15.2px];
+  }
+  .pLsiaO {
+    @apply w-full;
+  }
+  .nPpNgi {
+    @apply aspect-[3/2] w-full;
+  }
+  .UMVXdb {
+    @apply text-[15.2px];
+  }
+  .AWWsQc {
+    @apply text-[15.2px];
+  }
+  .cnfuQg {
+    @apply text-[15.2px];
+  }
+  .udlPPt {
+    @apply w-full;
+  }
+  .EPUaXE {
+    @apply aspect-[3/2] w-full;
+  }
+  .eesEkM {
+    @apply text-[15.2px];
+  }
+  .LNWgHU {
+    @apply text-[15.2px];
+  }
+  .bdsdDi {
+    @apply text-[15.2px];
+  }
+  .qxIbvf {
+    @apply w-full;
+  }
+}
+
+
+@font-face {
+    font-family: 'BOONE';
+    src: url('fonts/BOONE.woff') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+@font-face {
+    font-family: 'AvenirLTProRoman';
+    src: url('fonts/avenir-lt-pro/AvenirLTProRoman.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPEditorialNew-Ultralight';
+    src: url('fonts/editorial-new-font-family-1750899827-0/PPEditorialNew-Ultralight-BF644b21500d0c0.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPEditorialNew-UltralightItalic';
+    src: url('fonts/editorial-new-font-family-1750899827-0/PPEditorialNew-UltralightItalic-BF644b214ff1e9b.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTProLight';
+    src: url('fonts/avenir-lt-pro/AvenirLTProLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTProBlack';
+    src: url('fonts/avenir-lt-pro/AvenirLTProBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardo';
+  font-style: italic;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/cardo/v23/wlprgwnQFlxsbilI2RoZ.woff2') format('woff2');
+}
+
