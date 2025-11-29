@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Header from '@/components/about/Header';
 import { X } from 'lucide-react';
+import Footer from "@/components/Footer";
 
 declare global {
   interface Window {
@@ -100,6 +101,7 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-gray-200 overflow-hidden">
       <Header />
+      
       
       {/* Image Overlay */}
       {overlayImage && (
@@ -334,7 +336,9 @@ const Gallery = () => {
           cursor: pointer;
         }
       `}</style>
+    
     </div>
+
   );
 };
 

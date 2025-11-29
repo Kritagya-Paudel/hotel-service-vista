@@ -5,6 +5,49 @@ import { PhotoCarousel } from "@/components/PhotoCarousel";
 import Header from "@/components/about/Header";
 import Footer from "@/components/Footer";
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Link } from 'react-router-dom';
+
+
+const rooms = [
+  {
+    id: 'single-room',
+    title: 'Single Room',
+    subtitle: 'A space to call your own.',
+    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d495dda78da5679a8b9_67ba9babd4f2f9bed4b2474f_single-room-hero-shot.jpeg',
+    description: 'Ideal for solo travelers or shorter visits, our single rooms are quietly appointed for comfort, warmth, and a good night\'s rest after a day on the mountain.',
+    link: '/single-room',
+    badges: ['Single Bed', '1-2 Guests', '20m² - 25m²']
+  },
+  {
+    id: 'double-room',
+    title: 'Double Room',
+    subtitle: 'Spacious, serene, made for two.',
+    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d498111e949aab39f64_67cfb4c113e8d1dbe5ed8127_Zi_227_A.jpeg',
+    description: 'Our spacious double rooms offer comfort and style, perfect for couples or solo travelers seeking extra space.',
+    link: '/stay/double-room',
+    badges: ['Double Bed', '2 Guests', '20m² - 25m²']
+  },
+  {
+    id: 'junior-suite',
+    title: 'Junior Suite',
+    subtitle: 'Tailored for those who stay awhile.',
+    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d4954913f47bdbc1746_67bad5d3a3ae7caf3534b1ae_Zi_208_A%2520(1).jpeg',
+    description: 'Elegantly designed, our Junior Suites offer a refined retreat with added space and comfort.',
+    link: '/stay/junior-suite',
+    badges: ['Double Bed', '2 Guests', '40m² - 65m²']
+  },
+  {
+    id: 'suite',
+    title: 'Suite',
+    subtitle: 'A private world above the snowline.',
+    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d49ff89f562bf58917a_67cfbbbb988fc9ffda14cb50_Zi_307_A.jpeg',
+    description: 'Generous in scale and graceful in design, our suites offer the quiet luxury of space, privacy, and expansive mountain views—perfect for longer stays or those who travel with family.',
+    link: '/stay/suite',
+    badges: ['King Bed', '2 Guests', '63m² - 80m²']
+  }
+];
+
 const SingleRoom = () => {
   const amenities = [
     "Full board",
@@ -23,47 +66,55 @@ const SingleRoom = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <div className="fixed top-0 left-0 w-full z-50">
+        <Header />
+      </div>
       
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: `url('https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d495dda78da5679a8b9_67ba9babd4f2f9bed4b2474f_single-room-hero-shot.jpeg')` 
-          }}
-        >
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
+      <section className="relative h-screen flex overflow-hidden">
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-serif mb-6 tracking-wide">
-            Single Room
-          </h1>
-          <p className="text-xl md:text-2xl font-light italic mb-8">
+        <div className="items-center justify-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: `url('https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d495dda78da5679a8b9_67ba9babd4f2f9bed4b2474f_single-room-hero-shot.jpeg')` 
+            }}
+          >
+            <div className="absolute inset-0 bg-black/30"></div>
+          </div>
+        </div>
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6 relative h-full
+">
+          <div className="flex flex-col justify-center h-full">
+            <h1 className="text-6xl md:text-8xl mb-6 tracking-wide font-BOONE">
+              Single Room
+            </h1>
+          </div>
+          <p className="text-4xl md:text-4xl font-light italic font-AvenirLight absolute bottom-32 left-1/2 -translate-x-1/2">
             A space to call your own.
           </p>
-          
-          {/* Room Details Box */}
-          <div className="inline-flex bg-white/90 text-primary rounded-lg overflow-hidden text-sm font-medium">
-            <div className="px-6 py-3 border-r border-primary/20">
-              <span className="text-destructive">Single Bed</span>
+
+          <div className="inline-flex overflow-hidden text-white px-[0.1rem] py-[0.1rem] lg:text-[15.2px] gap-[3px] font-AvenirLight absolute bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap flex-nowrap" >
+            <div className="border text-white px-[0.2rem] py-[0.2rem] border-dashed border-white lg:text-[17.2px]">
+              <span className="px-[0.4rem]">Single Bed</span>
             </div>
-            <div className="px-6 py-3 border-r border-primary/20">
-              1-2 Guests
+            <div className="border text-white px-[0.1rem] py-[0.2rem] border-dashed border-white lg:text-[17.2px]">
+              <span className="px-[0.4rem]">1-2guests</span>
             </div>
-            <div className="px-6 py-3 border-r border-primary/20">
-              20m²
+            <div className="border text-white px-[0.1rem] py-[0.2rem] border-dashed border-white lg:text-[17.2px]">
+              <span className="px-[0.4rem]">20m²</span>
             </div>
-            <div className="px-6 py-3">
-              25m²
+            <div className="border text-white px-[0.2rem] py-[0.2rem] border-dashed border-white lg:text-[17.2px]">
+              <span className="px-[0.4rem]">25m²</span>
             </div>
           </div>
+
+
         </div>
       </section>
 
       {/* Overview Section - New Layout */}
-      <section className="min-h-screen bg-amber-50 flex flex-col">
+      <section className="min-h-screen bg-white flex flex-col">
         {/* Text Content - Two Columns at Top */}
         <div className="flex-1 px-8 lg:px-16 py-16">
           <div className="max-w-7xl mx-auto">
@@ -76,19 +127,19 @@ const SingleRoom = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
               {/* Left Column */}
               <div>
-                <h2 className="text-3xl lg:text-4xl font-serif text-destructive leading-tight mb-8">
+                <h2 className="text-3xl lg:text-4xl font-serif text-primary font-BOONE leading-tight mb-8">
                   Ideal for solo travelers or shorter visits, our single rooms are quietly appointed for comfort, warmth, and a good night's rest after a day on the mountain.
                 </h2>
                 
                 <Button 
-                  className="bg-destructive hover:bg-destructive/90 text-white px-8 py-3 text-base font-medium"
+                  className="bg-ocean-blue hover:bg-steel-blue text-white rounded-none px-3 md:px-6 text-sm"
                 >
                   Book this Room
                 </Button>
               </div>
 
               {/* Right Column */}
-              <div className="space-y-6 text-foreground leading-relaxed text-sm lg:text-base">
+              <div className="space-y-6 lg:text-base font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
                 <p>
                   Our smallest rooms are shaped by the same attention to comfort and calm as our grandest suites. Designed for solo stays—whether you're here for early mornings on the slopes or simply in need of a room of your own—each space offers a well-proportioned retreat: handsome woods, crisp linens, and the gentle hush that follows a day on skis.
                 </p>
@@ -101,58 +152,116 @@ const SingleRoom = () => {
           </div>
         </div>
 
-        {/* Image at Bottom */}
-        <div className="h-96 lg:h-[500px] relative overflow-hidden">
-          <img
-            src="/lovable-uploads/c2e4f0c5-b385-4f5c-96af-cc2d9a887833.png"
-            alt="Single Room Lounge Area"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/* Carousel */}
+          <div className="relative w-full">
+            <Carousel
+              className="w-full" 
+              opts={{ 
+                loop: true,
+                align: 'center',
+              }}
+            >
+              <CarouselContent className="-ml-4">
+                <CarouselItem className="pl-4 basis-[85%] md:basis-[90%]">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <img
+                      src="https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f5e733ce8316bd12ef_67baba9384b37ae060888bbe_single-room-shot1.jpeg"
+                      alt="Single Room View 1"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-2xl md:text-3xl font-serif">Double Room</h3>
+                      <p className="text-white/90 text-sm mt-1">Comfortable Bed</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-4 basis-[85%] md:basis-[90%]">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <img
+                      src="https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed7735c51b2eca2c56d71c_67babaa3cccac9623961e883_single-room-shot3.jpeg"
+                      alt="Single Room View 2"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-2xl md:text-3xl font-serif">Double Room</h3>
+                      <p className="text-white/90 text-sm mt-1">Stunning Mountain Views</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-4 basis-[85%] md:basis-[90%]">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <img
+                      src="https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f52f5f20f028b3f6d1_67cfb4713bdd5083ba0e7482_Zi_114_43.jpeg"
+                      alt="Single Room View 3"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-2xl md:text-3xl font-serif">Double Room</h3>
+                      <p className="text-white/90 text-sm mt-1">Spacious, serene, made for two.</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <div className="absolute bottom-8 right-8 flex gap-2 z-10">
+                <CarouselPrevious className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
+                <CarouselNext className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
+              </div>
+            </Carousel>
+          </div>
       </section>
+      <br />
+      <br />
 
       {/* Features & Amenities Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 max-w-7xl">
+      {/* Features & Amenities Section */}
+      <section className="relative min-h-screen py-20 flex items-center">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url('https://cdn.prod.website-files.com/67500d660a7c1d5d2c48fbc6/67bacc129296863ae1896ae5_LoruenserZimmerservice_200-hero.jpg')` 
+          }}
+        >
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column - Image */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <img
-                src="/lovable-uploads/96c05c75-e999-4b86-a196-7e2f3aa11453.png"
-                alt="Room Features"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute top-8 left-8">
-                <p className="text-white text-sm uppercase tracking-wider mb-4">
-                  SINGLE ROOM
-                </p>
-                <h3 className="text-white text-5xl md:text-6xl font-serif leading-tight">
-                  Features<br />
-                  <span className="italic font-light">&amp; Amenities</span>
-                </h3>
-              </div>
+            {/* Left Column - Title */}
+            <div>
+              <p className="text-white text-sm uppercase tracking-wider mb-4">
+                SINGLE ROOM
+              </p>
+              <h3 className="text-white text-5xl md:text-6xl font-serif leading-tight">
+                Features<br />
+                <span className="italic font-light">&amp; Amenities</span>
+              </h3>
             </div>
 
-            {/* Right Column - Amenities List */}
-            <div className="bg-background border-2 border-primary p-8 rounded-lg">
-              <h4 className="text-center text-primary text-lg font-medium mb-8 uppercase tracking-wider">
-                INCLUDED IN YOUR ROOM
-              </h4>
-              
-              <ul className="space-y-4">
-                {amenities.map((amenity, index) => (
-                  <li key={index} className="text-foreground text-base py-2 border-b border-muted/30 last:border-b-0">
-                    {amenity}
-                  </li>
-                ))}
-              </ul>
+            {/* Right Column - Amenities Box */}
+
+            <div className="bg-white font-AvenirLight border-1 border-ocean-blue p-1">
+              <div className="bg-background border-[5px] border-double border-destructive border-ocean-blue p-8 shadow-2xl">
+                <h4 className="text-center text-foreground text-sm font-medium mb-8 uppercase tracking-wider">
+                  INCLUDED IN YOUR ROOM
+                </h4>
+                
+                <ul className="space-y-4">
+                  {amenities.map((amenity, index) => (
+                    <li key={index} className="text-foreground text-base py-2 border-b border-muted/30 last:border-b-0">
+                      {amenity}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* More Rooms Section with Carousel */}
-      <section className="py-20 bg-muted/10">
+      {/* <section className="py-20 bg-muted/10">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-serif text-destructive mb-8 tracking-wide">
@@ -163,14 +272,107 @@ const SingleRoom = () => {
             </p>
           </div>
 
-          {/* Carousel */}
           <div className="max-w-6xl mx-auto">
             <PhotoCarousel />
           </div>
         </div>
-      </section>
+      </section> */}
+      
+      {/* my own edit */}
+      <section className="block z-[2] relative pb-40 px-6 h-full">
+        {/* Top subtitle */}
+        {/* <div className="justify-start items-center w-full flex pt-7 flex-col">
+          <div className="gap-x-2 text-[#724f48] tracking-[0] uppercase items-center text-[0.8rem] font-normal leading-none flex blur-none opacity-100">
+            Timeless alpine elegance
+          </div>
+        </div> */}
 
-      <Footer />
+        {/* Header section */}
+        <div className="justify-start items-center w-full flex pt-24 pb-7 flex-col lg:pb-7 sm:pb-7">
+          <div className="justify-start items-center flex blur-none opacity-100 flex-col lg:pb-0">
+            {/* Decorative SVG */}
+            {/* <img
+              className="align-middle max-w-full inline-block w-40 -rotate-[26deg] mb-7 border-0"
+              alt=""
+              loading="lazy"
+              src="https://cdn.prod.website-files.com/67500d660a7c1d5d2c48fbc6/67e75c805b1fb6a6f39b00ed_g14%20(1).svg"
+            /> */}
+            
+            {/* Main heading */}
+            <h2 className="font-normal text-[88px] leading-[88px] tracking-[-3.52px] text-ocean-blue text-center my-0 font-BOONE">
+              Other Rooms & Suites
+            </h2>
+            
+            {/* Description */}
+            <div className="gap-x-7 gap-y-7 justify-start items-center w-[42vw] flex mt-7 mb-24 flex-col lg:w-4/5 sm:w-full">
+              <p className="text-forest-green text-[19.2px] leading-[23.04px] font-normal tracking-[-0.192px] text-center my-0 sm:tracking-[-0.025rem] font-AvenirBlack">
+                Choose from 20 rooms with attached bathrooms and running hot water for extra comfort, 25 budget-friendly private rooms, or 9 fully furnished apartments ideal for long-term stays, volunteers, and trekkers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Rooms Carousel */}
+        {/* Carousel */}
+          <div className="relative w-full">
+            <Carousel
+              className="w-full" 
+              opts={{ 
+                loop: true,
+                align: 'center',
+              }}
+            >
+              <CarouselContent className="-ml-4">
+                <CarouselItem className="pl-4 basis-[85%] md:basis-[90%]">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <img
+                      src="https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f5e733ce8316bd12ef_67baba9384b37ae060888bbe_single-room-shot1.jpeg"
+                      alt="Single Room View 1"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-2xl md:text-3xl font-BOONE">Double Room</h3>
+                      <p className="text-white/90 text-sm mt-1 font-AvenirBlack">Spacious, Serene, Made for Two</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-4 basis-[85%] md:basis-[90%]">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <img
+                      src="https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d49ff89f562bf58917a_67cfbbbb988fc9ffda14cb50_Zi_307_A.jpeg"
+                      alt="Single Room View 2"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-2xl md:text-3xl font-BOONE">Suite</h3>
+                      <p className="text-white/90 text-sm mt-1 font-AvenirBlack">A private world above the snowline.</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-4 basis-[85%] md:basis-[90%]">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <img
+                      src="https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d4954913f47bdbc1746_67bad5d3a3ae7caf3534b1ae_Zi_208_A%2520(1).jpeg"
+                      alt="Single Room View 3"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-2xl md:text-3xl font-BOONE">Junior Suite</h3>
+                      <p className="text-white/90 text-sm mt-1 font-AvenirBlack">Tailored for those who stay awhile.</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <div className="absolute bottom-8 right-8 flex gap-2 z-10">
+                <CarouselPrevious className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
+                <CarouselNext className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
+              </div>
+            </Carousel>
+          </div>
+      
+    </section>
+
+    <Footer />
     </div>
   );
 };

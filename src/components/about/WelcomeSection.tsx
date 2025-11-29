@@ -28,13 +28,12 @@ const WelcomeSection = () => {
               Since 1927, the Khumnu Lodge has embodied alpine charm, blending tradition with modern luxury. Thoughtfully expanded over the years, it retains its nostalgic family atmosphere while offering exceptional comfort.
             </h3>
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
-              Now in the hands of the Jochum family's third generation, little has changed in spirit. The comforts are finer, the dining more refined, but the feeling remains the same: a house built for mountain life, where guests are welcomed with quiet familiarity and looked after with care.
-            </p>
+              Now guided by the Sherpa family who founded it decades ago, Khumbu Lodge has changed little in spirit. The rooms are warmer, the meals heartier, yet the feeling endures: a home built for high mountain life, where trekkers are greeted with easy familiarity and cared for as if they’ve been here before.            </p>
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
-              In the ski cellar, a small museum tells the story of those early days—of rope tows and wooden skis, of guides and guests who became lifelong friends. Their mark is still felt, not in spectacle, but in the way the snow squeaks underfoot, and the way the staff know just how you take your coffee.
+              Along the stairwell, old photographs trace the lodge’s beginnings—of early expeditions and dusty footpaths, of climbers and porters who shared stories long into the night. Their presence lingers still, not in grand displays, but in the crackle of the stove on cold mornings and the way the staff remember exactly when you like your tea.
             </p>
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed mb-6">
-              Some places are made to impress. The Lorünser was made to endure.
+              Some lodges are made to impress. Khumbu Lodge was made to belong.
             </p>
             <Button className="font-AvenirBlack self-start bg-transparent hover:bg-transparent text-ocean-blue border-b-2 border-ocean-blue rounded-none px-0 font-bold text-sm md:text-base">
               OUR HISTORY

@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12 items-center">
   
           {/* Left Column - Contact Information (Left Aligned) */}
-          <div className="flex flex-col items-start text-center">
+          <div className="flex flex-col items-center text-center">
               
               <div className="space-y-2 text-background">
                 <h3 className="font-AvenirBlack text-xl font-serif mb-4">Contact Us</h3>
@@ -52,7 +52,7 @@ const Footer = () => {
   </div>
 
   {/* Right Column - Navigation & Social (Right Aligned) */}
-  <div className="font-AvenirLight flex flex-col items-end text-center">
+  <div className="font-AvenirLight flex flex-col items-center text-center">
     <h3 className="text-xl font-serif mb-4">Explore</h3>
     <nav className="space-y-3">
       {['Home', 'About', 'Gallery', 'Rooms', 'Services'].map((link) => (
