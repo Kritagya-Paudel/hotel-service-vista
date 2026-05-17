@@ -23,6 +23,8 @@ const HeroSection = () => {
         loop
         muted
         playsInline
+        preload="auto"
+        poster="/lovable-uploads/hero-poster.jpg"
         className="absolute inset-0 w-full h-[120%] object-cover -top-[10%] hero-parallax"
       >
         <source src="/lovable-uploads/namche-aerial-shot.mp4" type="video/mp4" />
