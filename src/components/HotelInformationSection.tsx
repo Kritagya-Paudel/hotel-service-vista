@@ -54,7 +54,7 @@ const HotelInformationSection = () => {
             Hotel & Room <em className="italic">Information</em>
           </h2>
           <p className="font-AvenirBlack text-foreground text-lg max-w-2xl mx-auto">
-            Information for your stay at Sporthotel Lorünser
+            Information for your stay at Khumbu Lodge
           </p>
         </div>
 

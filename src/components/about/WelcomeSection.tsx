@@ -18,7 +18,7 @@ const WelcomeSection = () => {
           <div className="order-2 lg:order-1">
             <img 
               src="/lovable-uploads/Khumbu-front.jpeg" 
-              alt="Lorünser Hotel Entrance" 
+              alt="Khumbu Lodge Entrance"
               className="w-full h-[43rem] object-cover"
             />
           </div>
