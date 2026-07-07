@@ -44,7 +44,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/5fca111b-f362-4052-961d-1c72aa4f11c0.png" 
                 alt="Khumbu Lodge" 
-                className="w-[10vw] min-w-[60px] max-w-[120px] h-auto"
+                className="w-[20vw] min-w-[90px] max-w-[130px] h-auto"
               />
             </Link>
           </div>

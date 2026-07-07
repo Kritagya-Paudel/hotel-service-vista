@@ -44,7 +44,7 @@ const rooms = [
 
 const RoomsSection = () => {
   return (
-    <section className="block z-[2] relative bg-background pb-40 px-6">
+    <section className="block z-[2] relative bg-background pb-16 md:pb-40 px-4 md:px-6">
 
       {/* Header section */}
       <div className="justify-start items-center w-full flex pt-24 pb-7 flex-col lg:pb-7 sm:pb-7">
@@ -62,12 +62,12 @@ const RoomsSection = () => {
             Stay
           </p>
           {/* Main heading */}
-          <h2 className="font-Editorial text-5xl leading-[1.05] tracking-[-1.5px] md:text-7xl md:tracking-[-2.5px] lg:text-[88px] lg:leading-[88px] lg:tracking-[-3.52px] text-primary text-center my-0">
+          <h2 className="font-Editorial text-[2.5rem] leading-tight tracking-[-1px] sm:text-[3.5rem] md:text-[5rem] lg:text-[88px] lg:leading-[88px] lg:tracking-[-3.52px] text-primary text-center my-0">
             Our Rooms &amp; <em className="italic">Suites</em>
           </h2>
-          
+
           {/* Description */}
-          <div className="font-AvenirLight gap-x-7 gap-y-7 justify-start items-center w-full flex mt-7 mb-24 flex-col lg:w-[42vw]">
+          <div className="font-AvenirLight gap-x-7 gap-y-7 justify-start items-center w-full flex mt-7 mb-10 md:mb-24 flex-col lg:w-[42vw]">
             <p className="text-foreground text-[19.2px] leading-[23.04px] font-normal tracking-[-0.192px] text-center my-0 sm:tracking-[-0.025rem]">
               Choose from 20 rooms with attached bathrooms and running hot water for extra comfort, 25 budget-friendly private rooms, or 9 fully furnished apartments ideal for long-term stays, volunteers, and trekkers.
             </p>
@@ -77,7 +77,7 @@ const RoomsSection = () => {
 
       {/* Rooms grid */}
       <div className="font-AvenirLight w-full">
-        <div className="gap-x-[12.8px] gap-y-24 grid-rows-[auto_auto] grid-cols-[1fr_1fr] auto-cols-[1fr] grid cAIVPu" role="list">
+        <div className="gap-x-[12.8px] gap-y-16 md:gap-y-24 grid-cols-1 md:grid-cols-2 auto-cols-[1fr] grid" role="list">
           {rooms.map((room) => (
             <div key={room.id} className="w-dyn-item" role="listitem">
               <Link
@@ -110,7 +110,7 @@ const RoomsSection = () => {
 
                 {/* Room content */}
                 <div className="gap-x-[12.8px] gap-y-[12.8px] justify-start items-start flex w-[92%] blur-none opacity-100 flex-col lg:w-full sm:w-full">
-                  <h3 className="font-Editorial font-normal text-5xl md:text-6xl leading-[1] tracking-[-1.8px] my-0">
+                  <h3 className="font-Editorial font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight lg:leading-[60px] lg:tracking-[-1.8px] my-0">
                     {room.title}
                   </h3>
                   <h4 className="font-Editorial font-normal text-[19.2px] leading-[23.04px] tracking-[-0.384px] italic my-0">

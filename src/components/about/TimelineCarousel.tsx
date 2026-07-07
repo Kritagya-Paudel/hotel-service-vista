@@ -100,82 +100,78 @@ const TimelineCarousel = () => {
   const currentTimeline = timelineData[currentTimelineIndex];
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 px-4">
-      <div className="container mx-auto max-w-6xl">
+    <section className="relative py-12 md:py-16 lg:py-24 px-4">
+      <div className="container mx-auto max-w-6xl px-14 md:px-6">
         <div className="mb-8 md:mb-12 relative overflow-hidden min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
           <div className="relative">
             <div className="flex justify-center relative z-0">
-              <h2 className="text-[6rem] md:text-[10rem] lg:text-[16rem] font-BOONE text-ocean-blue leading-none">
+              <h2 className="font-BOONE text-[6rem] md:text-[10rem] lg:text-[16rem] text-ocean-blue leading-none">
                 {currentTimeline.year}
               </h2>
             </div>
             
             {/* Historical Photos Overlay */}
             {currentTimeline.images.map((image, index) => (
-              <img
+              <img 
                 key={index}
-                src={image.src}
-                alt={image.alt}
-                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                src={image.src} 
+                alt={image.alt} 
                 className={`${image.className} object-cover shadow-lg border-2 md:border-4 border-white transition-all duration-500 ease-in-out hover:scale-105`}
               />
             ))}
           </div>
           
-          <h3 className="text-lg md:text-xl lg:text-2xl font-serif text-steel-blue text-center mt-6 md:mt-8 mb-3 md:mb-4 relative z-20 px-2">
+          <h3 className="font-BOONE text-lg md:text-xl lg:text-2xl text-steel-blue text-center mt-6 md:mt-8 mb-3 md:mb-4 relative z-20 px-2">
             {currentTimeline.title}
           </h3>
-          <p className="text-xs md:text-sm lg:text-base text-center mx-auto max-w-3xl relative z-20 px-2 leading-relaxed text-forest-green">
+          <p className="font-AvenirLight text-xs md:text-sm lg:text-base text-center mx-auto max-w-3xl relative z-20 px-2 leading-relaxed text-forest-green">
             {currentTimeline.description}
           </p>
         </div>
         
-        <div className="flex justify-between mt-12 md:mt-20 border-t border-steel-blue/20 pt-4">
+        <div className="flex justify-between mt-8 md:mt-20 border-t border-steel-blue/20 pt-4 pb-2">
           {currentTimeline.years.map((year, index) => (
-            <div key={year} className={`text-sm md:text-lg lg:text-2xl font-BOONE ${
-              index === currentTimelineIndex 
-                ? 'text-ocean-blue' 
-                : index < currentTimelineIndex 
-                  ? 'text-steel-blue' 
+            <div key={year} className={`font-BOONE text-sm md:text-lg lg:text-2xl ${
+              index === currentTimelineIndex
+                ? 'text-ocean-blue'
+                : index < currentTimelineIndex
+                  ? 'text-steel-blue'
                   : 'text-sky-blue'
             }`}>
               {year}
             </div>
           ))}
         </div>
-        <div className="flex justify-between text-[8px] md:text-xs uppercase tracking-wider">
+        <div className="hidden md:flex justify-between text-[8px] md:text-xs uppercase tracking-wider font-AvenirLight">
           {currentTimeline.labels.map((label, index) => (
-            <div key={label} className={`text-center max-w-[60px] md:max-w-[80px] lg:max-w-none ${
-              index === currentTimelineIndex 
-                ? 'text-ocean-blue' 
-                : index < currentTimelineIndex 
-                  ? 'text-steel-blue' 
+            <div key={label} className={`text-center max-w-[80px] lg:max-w-none ${
+              index === currentTimelineIndex
+                ? 'text-ocean-blue'
+                : index < currentTimelineIndex
+                  ? 'text-steel-blue'
                   : 'text-sky-blue'
             }`}>
               {label}
             </div>
           ))}
         </div>
-        
-        <div className="flex justify-end mt-6 md:mt-8">
-          <div className="flex space-x-2">
-            <Button 
-              onClick={handlePreviousTimeline}
-              className="bg-ocean-blue hover:bg-steel-blue h-8 w-8 md:h-10 md:w-10 p-0 flex items-center justify-center"
-            >
-              <span className="sr-only">Previous</span>
-              <ChevronLeft className="h-4 w-4 md:h-5 md:w-5" />
-            </Button>
-            <Button 
-              onClick={handleNextTimeline}
-              className="bg-ocean-blue hover:bg-steel-blue h-8 w-8 md:h-10 md:w-10 p-0 flex items-center justify-center"
-            >
-              <span className="sr-only">Next</span>
-              <ChevronRight className="h-4 w-4 md:h-5 md:w-5" />
-            </Button>
-          </div>
-        </div>
       </div>
+
+      {/* Edge-positioned square nav buttons */}
+      <Button
+        onClick={handlePreviousTimeline}
+        className="absolute left-3 top-1/2 -translate-y-1/2 bg-ocean-blue hover:bg-steel-blue rounded-none h-12 w-12 md:h-14 md:w-14 p-0 flex items-center justify-center border-2 border-steel-blue/40"
+      >
+        <span className="sr-only">Previous</span>
+        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+      </Button>
+      <Button
+        onClick={handleNextTimeline}
+        className="absolute right-3 top-1/2 -translate-y-1/2 bg-ocean-blue hover:bg-steel-blue rounded-none h-12 w-12 md:h-14 md:w-14 p-0 flex items-center justify-center border-2 border-steel-blue/40"
+      >
+        <span className="sr-only">Next</span>
+        <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+      </Button>
     </section>
   );
 };

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-lg md:text-xl font-serif mb-3 md:mb-4">Lorünser</h3>
+            <h3 className="text-lg md:text-xl font-serif mb-3 md:mb-4">Khumbu Lodge</h3>
             <p className="text-xs md:text-sm text-sky-blue leading-relaxed">
               A legacy of alpine hospitality since 1927.
             </p>
@@ -32,15 +32,15 @@ const Footer = () => {
           <div>
             <h4 className="font-medium mb-3 md:mb-4 text-sm md:text-base">Contact</h4>
             <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-sky-blue">
-              <li>Zürs am Arlberg, Austria</li>
-              <li>+43 5583 2355</li>
-              <li>info@lorunser.com</li>
+              <li>Namche Bazaar, Nepal</li>
+              <li>+977 123-456789</li>
+              <li>info@khumbulodge.com</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-white/20 mt-6 md:mt-8 pt-6 md:pt-8">
           <p className="text-center text-xs md:text-sm text-sky-blue">
-            © 2024 Sporthotel Lorünser. All rights reserved.
+            © 2025 Khumbu Lodge. All rights reserved.
           </p>
         </div>
       </div>

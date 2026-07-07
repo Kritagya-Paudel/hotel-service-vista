@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="shadow-sm border-b sticky top-0 z-50 bg-background border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24 sm:h-20">
           {/* Desktop Navigation Links - Left */}
           <div className="hidden md:block">
             <div className="flex items-baseline space-x-8">
@@ -39,7 +39,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/5fca111b-f362-4052-961d-1c72aa4f11c0.png" 
               alt="Khuabu Lodge" 
-              className="h-16 w-auto"
+              className="h-20 sm:h-16 w-auto"
             />
           </div>
 

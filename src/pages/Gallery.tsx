@@ -128,6 +128,12 @@ const Gallery = () => {
         </div>
       )}
       
+      {/* Title overlay */}
+      <div className="pointer-events-none fixed bottom-8 left-8 z-40">
+        <p className="font-AvenirLight text-xs uppercase tracking-[0.3em] text-white/60 mb-1">Khumbu Lodge</p>
+        <h1 className="font-BOONE text-5xl md:text-7xl text-white/90 leading-none">Gallery</h1>
+      </div>
+
       <div className="scroll-animations-example" data-scroll-container ref={scrollRef}>
         <div className="scrollsection" data-scroll-section>
           <div className="item -normal" data-scroll data-scroll-speed="2">
