@@ -43,7 +43,7 @@ const SkiingSection = () => {
             Pemba Sherpa & Family
           </div>
           <div className="mt-4">
-            <img src="/lovable-uploads/signature.png" alt="Sherpa Seal" className="h-[5rem] w-[5rem] md:h-[5rem] md:w-[12rem]" />
+            <img src="/lovable-uploads/signature.png" alt="Sherpa Seal" className="h-[5rem] w-auto object-contain" />
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full backdrop-blur-sm border-b border-steel-blue/20 bg-transparent">
+      <header className="sticky top-0 z-50 w-full backdrop-blur-md border-b border-foreground/10 bg-background/70">
         <div className="container mx-auto flex h-[7.5rem] items-center justify-between px-4 md:px-6 ">
           
           {/* Hamburger Menu */}
@@ -51,7 +51,7 @@ const Header = () => {
           
           {/* Book Button */}
           <div className="flex items-center">
-            <Button className="bg-ocean-blue hover:bg-steel-blue text-white rounded-none px-3 md:px-6 text-sm">
+            <Button className="bg-primary hover:bg-secondary text-primary-foreground rounded-none px-4 md:px-8 text-xs uppercase tracking-[0.25em]">
               <Link 
               to="/booking"
               onClick={handleMenuItemClick}>
@@ -72,42 +72,42 @@ const Header = () => {
           <nav className="flex flex-col items-center space-y-8">
             <Link 
               to="/" 
-              className="text-2xl md:text-3xl font-medium hover:text-ocean-blue transition-colors text-forest-green"
+              className="font-Editorial text-4xl md:text-5xl text-primary hover:italic hover:text-secondary transition-colors"
               onClick={handleMenuItemClick}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="text-2xl md:text-3xl font-medium hover:text-ocean-blue transition-colors text-forest-green"
+              className="font-Editorial text-4xl md:text-5xl text-primary hover:italic hover:text-secondary transition-colors"
               onClick={handleMenuItemClick}
             >
               About
             </Link>
             <Link 
               to="/gallery" 
-              className="text-2xl md:text-3xl font-medium hover:text-ocean-blue transition-colors text-forest-green"
+              className="font-Editorial text-4xl md:text-5xl text-primary hover:italic hover:text-secondary transition-colors"
               onClick={handleMenuItemClick}
             >
               Gallery
             </Link>
             <Link 
               to="/rooms" 
-              className="text-2xl md:text-3xl font-medium hover:text-ocean-blue transition-colors text-forest-green"
+              className="font-Editorial text-4xl md:text-5xl text-primary hover:italic hover:text-secondary transition-colors"
               onClick={handleMenuItemClick}
             >
               Rooms
             </Link>
             <Link 
               to="/services" 
-              className="text-2xl md:text-3xl font-medium hover:text-ocean-blue transition-colors text-forest-green"
+              className="font-Editorial text-4xl md:text-5xl text-primary hover:italic hover:text-secondary transition-colors"
               onClick={handleMenuItemClick}
             >
               Services
             </Link>
             <Link 
               to="/booking" 
-              className="text-2xl md:text-3xl font-medium hover:text-ocean-blue transition-colors text-forest-green"
+              className="font-Editorial text-4xl md:text-5xl text-primary hover:italic hover:text-secondary transition-colors"
               onClick={handleMenuItemClick}
             >
               Book

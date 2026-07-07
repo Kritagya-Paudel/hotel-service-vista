@@ -12,7 +12,11 @@ export default {
 	prefix: "",
 	theme: {
 		fontFamily: {
-		BOONE: ['BOONE', 'sans-serif'],
+		// BOONE remapped to the editorial serif for the lorunser.com look;
+		// the original display font remains available as font-BooneDisplay.
+		BOONE: ['PPEditorialNew', 'Georgia', 'serif'],
+		BooneDisplay: ['BOONE', 'sans-serif'],
+		Editorial: ['PPEditorialNew', 'Georgia', 'serif'],
 		AvenirLight: ['AvenirLTProLight', 'sans-serif'],
 		AvenirBlack: ['AvenirLTProBlack', 'sans-serif'],
 		Cardo: ['Cardo', 'italic'],

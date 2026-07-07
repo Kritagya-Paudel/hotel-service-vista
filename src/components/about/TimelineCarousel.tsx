@@ -105,17 +105,18 @@ const TimelineCarousel = () => {
         <div className="mb-8 md:mb-12 relative overflow-hidden min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
           <div className="relative">
             <div className="flex justify-center relative z-0">
-              <h2 className="text-[6rem] md:text-[10rem] lg:text-[16rem] font-serif text-ocean-blue leading-none">
+              <h2 className="text-[6rem] md:text-[10rem] lg:text-[16rem] font-BOONE text-ocean-blue leading-none">
                 {currentTimeline.year}
               </h2>
             </div>
             
             {/* Historical Photos Overlay */}
             {currentTimeline.images.map((image, index) => (
-              <img 
+              <img
                 key={index}
-                src={image.src} 
-                alt={image.alt} 
+                src={image.src}
+                alt={image.alt}
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 className={`${image.className} object-cover shadow-lg border-2 md:border-4 border-white transition-all duration-500 ease-in-out hover:scale-105`}
               />
             ))}
@@ -131,7 +132,7 @@ const TimelineCarousel = () => {
         
         <div className="flex justify-between mt-12 md:mt-20 border-t border-steel-blue/20 pt-4">
           {currentTimeline.years.map((year, index) => (
-            <div key={year} className={`text-sm md:text-lg lg:text-2xl font-serif ${
+            <div key={year} className={`text-sm md:text-lg lg:text-2xl font-BOONE ${
               index === currentTimelineIndex 
                 ? 'text-ocean-blue' 
                 : index < currentTimelineIndex 

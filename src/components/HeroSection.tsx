@@ -1,10 +1,8 @@
 import React from 'react';
 
-
-
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <video
         autoPlay
         loop
@@ -15,26 +13,21 @@ const HeroSection = () => {
         <source src="/lovable-uploads/namche-aerial-shot.mp4" type="video/mp4" />
       </video>
 
+      {/* Readability overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20"></div>
+
       {/* Content */}
-        <div className="font-BOONE absolute z-10 h-full flex flex-col justify-end items-center text-center text-background px-0 pb-[8rem]">
-          <h2 className="text-[2.8rem] font-normal mb-5">
-            Finest Lodge in
-          </h2>
-          <div className="flex justify-between w-screen text-[8vw] md:text-[6vw] font-bold uppercase tracking-0 px-4">
-            <span>N</span>
-            <span>A</span>
-            <span>M</span>
-            <span>C</span>
-            <span>H</span>
-            <span>E</span>
-            <span>B</span>
-            <span>A</span>
-            <span>Z</span>
-            <span>A</span>
-            <span>R</span>
-          </div>
-          <p className="text-[2rem] md:text-[2rem] max-md:text-[1.2rem] mt-5 italic tracking-[0.5em]">
-          1 9 7 3
+        <div className="absolute inset-0 z-10 flex flex-col justify-end items-center text-center text-background px-0 pb-[7rem]">
+          <p className="font-Editorial italic text-2xl md:text-4xl mb-6">
+            The finest lodge in
+          </p>
+          <h1 className="font-Editorial flex justify-between w-full text-[9vw] md:text-[7vw] leading-none tracking-[-0.02em] px-4 md:px-6">
+            {'NAMCHEBAZAR'.split('').map((letter, index) => (
+              <span key={index}>{letter}</span>
+            ))}
+          </h1>
+          <p className="font-AvenirLight text-[0.7rem] md:text-xs uppercase tracking-[0.5em] mt-8">
+            The finest home for trekkers since 1973
           </p>
         </div>
     </section>

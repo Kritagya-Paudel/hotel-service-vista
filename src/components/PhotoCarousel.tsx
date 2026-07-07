@@ -43,7 +43,7 @@ export const PhotoCarousel = () => {
         <CarouselContent>
           {carouselImages.map((image) => (
             <CarouselItem key={image.id}>
-              <div className="relative aspect-[4/4] overflow-hidden rounded-lg shadow-2xl border border-muted/20">
+              <div className="relative aspect-[4/4] overflow-hidden shadow-2xl border border-background/20">
                 <img
                   src={image.src}
                   alt={image.alt}
@@ -57,10 +57,6 @@ export const PhotoCarousel = () => {
         <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-0 shadow-lg" />
         <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-0 shadow-lg" />
       </Carousel>
-
-      {/* Decorative Elements */}
-      <div className="absolute -top-8 -right-8 w-24 h-24 bg-muted/10 rounded-full blur-xl" />
-      <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-accent/10 rounded-full blur-2xl" />
     </div>
   );
 };

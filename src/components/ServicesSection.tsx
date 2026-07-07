@@ -5,17 +5,19 @@ import { PhotoCarousel } from './PhotoCarousel';
 
 const ServicesSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-primary via-secondary to-primary">
+    <section className="py-24 md:py-32 bg-primary">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="font-BOONE text-4xl md:text-6xl font-serif text-background mb-4 italic">
-            What's Included
+        <div className="text-center mb-16">
+          <p className="font-AvenirLight text-xs uppercase tracking-[0.35em] text-background/60 mb-6">
+            Services
+          </p>
+          <h2 className="font-Editorial text-4xl md:text-6xl tracking-[-0.02em] text-background mb-6">
+            What's included
+            <br />
+            <em className="italic">in your stay?</em>
           </h2>
-          <h3 className="font-BOONE text-2xl md:text-4xl font-serif text-background italic mb-6">
-            In Your Stay?
-          </h3>
-          <p className="font-AvenirLight text-muted max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="font-AvenirLight text-background/75 max-w-2xl mx-auto text-lg leading-relaxed">
             A stay at Khumbu Lodge offers more than just a room—it’s an immersion into the heart of the Himalayas. Savor authentic Sherpa hospitality, enjoy hearty meals, and unwind with modern comforts, all while surrounded by breathtaking mountain views.
           </p>
         </div>

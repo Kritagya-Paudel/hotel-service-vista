@@ -47,14 +47,14 @@ const HotelInformationSection = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="font-AvenirLight text-foreground/60 text-sm uppercase tracking-widest mb-4">
-            ADDITIONAL INFO
+          <p className="font-AvenirLight text-secondary text-xs uppercase tracking-[0.35em] mb-6">
+            Additional Info
           </p>
-          <h2 className="font-BOONE text-4xl md:text-5xl font-serif text-primary mb-6">
-            Hotel & Room <em className="italic">Information</em>
+          <h2 className="font-Editorial text-4xl md:text-6xl tracking-[-0.02em] text-primary mb-6">
+            Hotel &amp; Room <em className="italic">Information</em>
           </h2>
-          <p className="font-AvenirBlack text-foreground text-lg max-w-2xl mx-auto">
-            Information for your stay at Sporthotel Lorünser
+          <p className="font-AvenirLight text-foreground/80 text-lg max-w-2xl mx-auto">
+            Information for your stay at Khumbu Lodge
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const HotelInformationSection = () => {
                 <AccordionTrigger className="text-left hover:no-underline group py-8 [&[data-state=open]>div>svg]:rotate-45">
                   <div className="flex items-center justify-between w-full">
                     <div className="flex items-center space-x-6">
-                      <span className="font-AvenirBLack text-primary font-bold text-lg min-w-[2rem]">
+                      <span className="font-Editorial italic text-secondary text-lg min-w-[2rem]">
                         {info.number}
                       </span>
                       <span className="font-AvenirLight text-foreground font-medium text-base md:text-lg uppercase tracking-wide">

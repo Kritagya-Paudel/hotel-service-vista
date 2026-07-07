@@ -57,9 +57,13 @@ const RoomsSection = () => {
             src="https://cdn.prod.website-files.com/67500d660a7c1d5d2c48fbc6/67e75c805b1fb6a6f39b00ed_g14%20(1).svg"
           />
            */}
+          {/* Eyebrow */}
+          <p className="font-AvenirLight text-xs uppercase tracking-[0.35em] text-secondary mb-6">
+            Stay
+          </p>
           {/* Main heading */}
-          <h2 className="font-BOONE text-[88px] leading-[88px] tracking-[-3.52px] text-primary text-center my-0">
-            Our Rooms & Suites
+          <h2 className="font-Editorial text-5xl leading-[1.05] tracking-[-1.5px] md:text-7xl md:tracking-[-2.5px] lg:text-[88px] lg:leading-[88px] lg:tracking-[-3.52px] text-primary text-center my-0">
+            Our Rooms &amp; <em className="italic">Suites</em>
           </h2>
           
           {/* Description */}
@@ -106,10 +110,10 @@ const RoomsSection = () => {
 
                 {/* Room content */}
                 <div className="gap-x-[12.8px] gap-y-[12.8px] justify-start items-start flex w-[92%] blur-none opacity-100 flex-col lg:w-full sm:w-full">
-                  <h3 className="font-normal text-6xl leading-[60px] tracking-[-1.8px] my-0">
+                  <h3 className="font-Editorial font-normal text-5xl md:text-6xl leading-[1] tracking-[-1.8px] my-0">
                     {room.title}
                   </h3>
-                  <h4 className="font-normal text-[19.2px] leading-[23.04px] tracking-[-0.384px] italic my-0">
+                  <h4 className="font-Editorial font-normal text-[19.2px] leading-[23.04px] tracking-[-0.384px] italic my-0">
                     {room.subtitle}
                   </h4>
                 <p className="text-foreground text-[15.2px] leading-[21.28px] font-normal tracking-[-0.152px] my-0">

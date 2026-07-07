@@ -37,7 +37,7 @@ All colors MUST be HSL.
     --input: 202 59% 72%; /* #8FC1E3 */
     --ring: 207 48% 36%; /* #31708E */
 
-    --radius: 0.5rem;
+    --radius: 0rem; /* sharp corners for the lorunser.com look */
 
     --sidebar-background: 218 33% 97%; /* #F7F9FB */
     --sidebar-foreground: 94 8% 43%; /* #687864 */
@@ -102,6 +102,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'AvenirLTProLight', Arial, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
   }
 }
 
@@ -240,6 +245,20 @@ All colors MUST be HSL.
     src: url('fonts/avenir-lt-pro/AvenirLTProRoman.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('fonts/editorial-new-font-family-1750899827-0/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('fonts/editorial-new-font-family-1750899827-0/PPEditorialNew-Italic-BF644b214fb0c0a.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
 }
 
 @font-face {

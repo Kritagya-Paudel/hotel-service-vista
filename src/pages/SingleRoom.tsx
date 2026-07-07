@@ -90,11 +90,11 @@ const SingleRoom = () => {
               Single Room
             </h1>
           </div>
-          <p className="text-4xl md:text-4xl font-light italic font-AvenirLight absolute bottom-32 left-1/2 -translate-x-1/2">
+          <p className="text-2xl md:text-4xl font-light italic font-AvenirLight absolute bottom-32 left-1/2 -translate-x-1/2 w-full px-4">
             A space to call your own.
           </p>
 
-          <div className="inline-flex overflow-hidden text-white px-[0.1rem] py-[0.1rem] lg:text-[15.2px] gap-[3px] font-AvenirLight absolute bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap flex-nowrap" >
+          <div className="inline-flex overflow-hidden text-white px-[0.1rem] py-[0.1rem] lg:text-[15.2px] gap-[3px] font-AvenirLight absolute bottom-7 left-1/2 -translate-x-1/2 max-w-[95vw] flex-wrap justify-center" >
             <div className="border text-white px-[0.2rem] py-[0.2rem] border-dashed border-white lg:text-[17.2px]">
               <span className="px-[0.4rem]">Single Bed</span>
             </div>
@@ -299,12 +299,12 @@ const SingleRoom = () => {
             /> */}
             
             {/* Main heading */}
-            <h2 className="font-normal text-[88px] leading-[88px] tracking-[-3.52px] text-ocean-blue text-center my-0 font-BOONE">
+            <h2 className="font-normal text-5xl leading-[1.05] tracking-[-1.5px] md:text-7xl md:tracking-[-2.5px] lg:text-[88px] lg:leading-[88px] lg:tracking-[-3.52px] text-ocean-blue text-center my-0 font-BOONE">
               Other Rooms & Suites
             </h2>
-            
+
             {/* Description */}
-            <div className="gap-x-7 gap-y-7 justify-start items-center w-[42vw] flex mt-7 mb-24 flex-col lg:w-4/5 sm:w-full">
+            <div className="gap-x-7 gap-y-7 justify-start items-center w-full lg:w-[42vw] flex mt-7 mb-24 flex-col">
               <p className="text-forest-green text-[19.2px] leading-[23.04px] font-normal tracking-[-0.192px] text-center my-0 sm:tracking-[-0.025rem] font-AvenirBlack">
                 Choose from 20 rooms with attached bathrooms and running hot water for extra comfort, 25 budget-friendly private rooms, or 9 fully furnished apartments ideal for long-term stays, volunteers, and trekkers.
               </p>

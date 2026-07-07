@@ -42,11 +42,17 @@ const testimonials = [
 const TestimonialSection = () => {
   return (
     <section className="py-16 bg-background relative">
+      <div className="px-6 md:px-20 mb-16">
+        <div className="border-t border-border w-full"></div>
+      </div>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="font-BOONE text-4xl md:text-6xl font-serif text-primary mb-4">
-            In The Press
+          <p className="font-AvenirLight text-xs uppercase tracking-[0.35em] text-secondary mb-6">
+            Guest Stories
+          </p>
+          <h2 className="font-Editorial text-4xl md:text-6xl tracking-[-0.02em] text-primary mb-4">
+            In the <em className="italic">Press</em>
           </h2>
         </div>
 
@@ -60,12 +66,12 @@ const TestimonialSection = () => {
                   <div className="hidden md:grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[400px] px-4 lg:px-16">
                     {/* Quote Mark and Quote */}
                     <div className="lg:col-span-6 flex items-start space-x-4 lg:space-x-8">
-                      <div className="text-6xl lg:text-8xl font-serif text-primary leading-none mt-2">
+                      <div className="font-Editorial text-6xl lg:text-8xl text-secondary leading-none mt-2">
                         "
                       </div>
                       <div className="flex-1">
-                        <div className="w-20 h-0.5 bg-foreground mb-6"></div>
-                        <h3 className="font-AvenirBlack text-2xl lg:text-4xl font-serif text-primary leading-tight">
+                        <div className="w-20 h-px bg-border mb-6"></div>
+                        <h3 className="font-Editorial text-3xl lg:text-5xl tracking-[-0.02em] text-primary leading-[1.1]">
                           {testimonial.quote}
                         </h3>
                       </div>
@@ -89,14 +95,14 @@ const TestimonialSection = () => {
                   </div>
 
                   {/* Mobile Layout */}
-                  <div className="md:hidden px-4 py-8 text-center min-h-[400px] flex flex-col justify-center">
+                  <div className="md:hidden px-12 py-8 text-center min-h-[400px] flex flex-col justify-center">
                     {/* Large quote mark centered */}
-                    <div className="text-8xl font-serif text-foreground leading-none mb-8">
+                    <div className="font-Editorial text-8xl text-secondary leading-none mb-8">
                       "
                     </div>
-                    
+
                     {/* Quote */}
-                    <h3 className="font-AvenirBlack text-2xl font-serif text-foreground leading-tight mb-8 px-4">
+                    <h3 className="font-Editorial text-3xl tracking-[-0.02em] text-primary leading-[1.1] mb-8 px-4">
                       {testimonial.quote}
                     </h3>
                     
@@ -124,8 +130,8 @@ const TestimonialSection = () => {
           </Carousel>
         </div>
       </div>
-      <div className="px-[5rem]">
-        <div className="border-t border-foreground-300 w-full"></div>
+      <div className="px-6 md:px-20">
+        <div className="border-t border-border w-full"></div>
       </div>
 
     </section>

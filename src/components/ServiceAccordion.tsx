@@ -79,17 +79,17 @@ export const ServiceAccordion = () => {
             <AccordionItem 
               key={service.id} 
               value={service.id}
-              className="border-muted/20 hover:border-muted/40 transition-colors"
+              className="border-background/20 hover:border-background/40 transition-colors"
             >
               <AccordionTrigger className="text-left hover:no-underline group py-6 [&>svg]:text-white">
                 <div className="flex items-center space-x-4">
-                  <IconComponent className="h-5 w-5 text-muted group-hover:text-background transition-colors" />
-                  <span className="text-background font-semibold tracking-wide text-sm md:text-base group-hover:text-background transition-colors">
+                  <IconComponent className="h-5 w-5 text-background/60 group-hover:text-background transition-colors" />
+                  <span className="font-AvenirLight text-background uppercase tracking-[0.15em] text-sm md:text-base group-hover:text-background transition-colors">
                     {service.title}
                   </span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted pb-6 pl-9">
+              <AccordionContent className="font-AvenirLight text-background/75 pb-6 pl-9">
                 <p className="leading-relaxed">
                   {service.content}
                 </p>
