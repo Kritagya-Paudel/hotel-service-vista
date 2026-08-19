@@ -5,21 +5,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const TimelineCarousel = () => {
   const timelineData = [
     {
-      year: "1975",
+      year: "1973",
       title: "Khumbu Lodge Established",
       description: "Khumbu Lodge was established, marking the beginning of a unique hospitality experience in the Everest region.",
-      years: ["1975", "1985", "1990", "2005", "2020"],
+      years: ["1973", "1985", "1987", "2005", "2020"],
       labels: ["LODGE ESTABLISHED", "LIBRARY BUILT", "VISIT BY PRESIDENT JIMMY CARTER", "EXPANSION PROJECT", "MODERNIZATION"],
       images: [
         { 
-          src: "/lovable-uploads/khumbu-lodge-1975.jpg", 
-          alt: "Khumbu Lodge in 1975", 
-          className: "absolute top-1/4 left-2 md:left-4 w-32 h-24 md:w-48 md:h-36 lg:w-64 lg:h-48 rotate-[-8deg] z-10" 
+          src: "/lovable-uploads/Khumbu-front.jpeg", 
+          alt: "The lodge frontage in Namche Bazaar", 
+          className: "absolute top-1/4 left-2 md:left-4 w-32 h-24 md:w-48 md:h-36 lg:w-64 lg:h-48 rotate-[-8deg] z-10 grayscale hover:grayscale-0" 
         },
         { 
-          src: "/lovable-uploads/khumbu-lodge-1975-exterior.jpg", 
-          alt: "Khumbu Lodge exterior", 
-          className: "absolute top-0 right-2 md:right-4 w-40 h-28 md:w-56 md:h-40 lg:w-72 lg:h-52 rotate-[3deg] z-10" 
+          src: "/lovable-uploads/khumbu-restaurant.webp", 
+          alt: "The Khumbu Restaurant dining room", 
+          className: "absolute top-0 right-2 md:right-4 w-40 h-28 md:w-56 md:h-40 lg:w-72 lg:h-52 rotate-[3deg] z-10 grayscale hover:grayscale-0" 
         }
       ]
     },
@@ -27,31 +27,31 @@ const TimelineCarousel = () => {
       year: "1985",
       title: "Library Built",
       description: "A dedicated library was built, enriching the lodge's cultural and educational offerings for guests and the community.",
-      years: ["1975", "1985", "1990", "2005", "2020"],
+      years: ["1973", "1985", "1987", "2005", "2020"],
       labels: ["LODGE ESTABLISHED", "LIBRARY BUILT", "VISIT BY PRESIDENT JIMMY CARTER", "EXPANSION PROJECT", "MODERNIZATION"],
       images: [
         { 
-          src: "/lovable-uploads/khumbu-lodge-library.jpg", 
-          alt: "Library at Khumbu Lodge", 
+          src: "/lovable-uploads/gallery/gallery-01.jpeg", 
+          alt: "Framed mountain photography lining the lodge corridor", 
           className: "absolute top-1/3 left-4 md:left-8 w-28 h-20 md:w-44 md:h-32 lg:w-56 lg:h-40 rotate-[-12deg] z-10" 
         },
         { 
-          src: "/lovable-uploads/khumbu-lodge-library-inside.jpg", 
-          alt: "Inside the library", 
+          src: "/lovable-uploads/gallery/gallery-05.jpeg", 
+          alt: "The lodge common room and its shelves", 
           className: "absolute top-1/4 right-4 md:right-8 w-28 h-36 md:w-40 md:h-48 lg:w-52 lg:h-60 rotate-[6deg] z-10" 
         }
       ]
     },
     {
-      year: "1990",
+      year: "1987",
       title: "Visit by President Jimmy Carter",
       description: "The lodge had the honor of hosting former U.S. President Jimmy Carter, highlighting its international recognition.",
-      years: ["1975", "1985", "1990", "2005", "2020"],
+      years: ["1973", "1985", "1987", "2005", "2020"],
       labels: ["LODGE ESTABLISHED", "LIBRARY BUILT", "VISIT BY PRESIDENT JIMMY CARTER", "EXPANSION PROJECT", "MODERNIZATION"],
       images: [
         { 
           src: "/lovable-uploads/jimmy-carter-visit.jpg", 
-          alt: "President Jimmy Carter visiting Khumbu Lodge", 
+          alt: "President Jimmy Carter greeted on his visit", 
           className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-32 md:w-64 md:h-44 lg:w-80 lg:h-56 rotate-[-2deg] z-10" 
         }
       ]
@@ -60,13 +60,18 @@ const TimelineCarousel = () => {
       year: "2005",
       title: "Expansion Project Completed",
       description: "A major expansion project was completed, adding more guest rooms and modern amenities while preserving the lodge's traditional charm.",
-      years: ["1975", "1985", "1990", "2005", "2020"],
+      years: ["1973", "1985", "1987", "2005", "2020"],
       labels: ["LODGE ESTABLISHED", "LIBRARY BUILT", "VISIT BY PRESIDENT JIMMY CARTER", "EXPANSION PROJECT", "MODERNIZATION"],
       images: [
         { 
-          src: "/lovable-uploads/khumbu-lodge-expansion.jpg", 
-          alt: "Khumbu Lodge expansion", 
+          src: "/lovable-uploads/rooms/deluxe-double-01.jpeg", 
+          alt: "A deluxe double room added in the expansion", 
           className: "absolute top-1/4 left-1/4 w-36 h-28 md:w-48 md:h-36 lg:w-60 lg:h-44 rotate-[-5deg] z-10" 
+        },
+        { 
+          src: "/lovable-uploads/rooms/deluxe-double-04.jpeg", 
+          alt: "Corner windows in an expanded guest room", 
+          className: "absolute bottom-0 right-1/4 w-32 h-24 md:w-44 md:h-32 lg:w-56 lg:h-40 rotate-[8deg] z-10" 
         }
       ]
     },
@@ -74,13 +79,18 @@ const TimelineCarousel = () => {
       year: "2020",
       title: "Modernization",
       description: "Recent modernization efforts have enhanced guest comfort and sustainability, ensuring Khumbu Lodge remains a premier destination.",
-      years: ["1975", "1985", "1990", "2005", "2020"],
+      years: ["1973", "1985", "1987", "2005", "2020"],
       labels: ["LODGE ESTABLISHED", "LIBRARY BUILT", "VISIT BY PRESIDENT JIMMY CARTER", "EXPANSION PROJECT", "MODERNIZATION"],
       images: [
         { 
-          src: "/lovable-uploads/khumbu-lodge-modern.jpg", 
-          alt: "Modern Khumbu Lodge", 
+          src: "/lovable-uploads/rooms/basic-standard-01.jpeg", 
+          alt: "A refreshed standard room", 
           className: "absolute top-1/3 right-1/4 w-28 h-20 md:w-40 md:h-28 lg:w-52 lg:h-36 rotate-[12deg] z-10" 
+        },
+        { 
+          src: "/lovable-uploads/gallery/gallery-04.jpeg", 
+          alt: "The lodge in Namche Bazaar today", 
+          className: "absolute top-1/4 left-1/4 w-32 h-24 md:w-44 md:h-32 lg:w-56 lg:h-40 rotate-[-6deg] z-10" 
         }
       ]
     }
@@ -116,6 +126,7 @@ const TimelineCarousel = () => {
                 key={index}
                 src={image.src} 
                 alt={image.alt} 
+                loading="lazy"
                 className={`${image.className} object-cover shadow-lg border-2 md:border-4 border-white transition-all duration-500 ease-in-out hover:scale-105`}
               />
             ))}

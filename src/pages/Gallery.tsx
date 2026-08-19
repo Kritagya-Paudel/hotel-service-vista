@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { usePageTitle } from "@/hooks/usePageTitle";
 import Header from '@/components/about/Header';
 import { X } from 'lucide-react';
 import Footer from "@/components/Footer";
+import { useLenis } from '@/lib/lenis';
 
 declare global {
   interface Window {
@@ -10,10 +12,18 @@ declare global {
 }
 
 const Gallery = () => {
+  usePageTitle("Gallery — Khumbu Lodge", "Photographs of Khumbu Lodge and Namche Bazaar.");
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollInstance = useRef<any>(null);
   const [overlayImage, setOverlayImage] = useState<string | null>(null);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const lenis = useLenis();
+
+  // Locomotive drives the horizontal scroll here, so Lenis has to stand down.
+  useEffect(() => {
+    lenis?.stop();
+    return () => lenis?.start();
+  }, [lenis]);
 
   useEffect(() => {
     // Load locomotive scroll CSS
@@ -47,6 +57,7 @@ const Gallery = () => {
     scrollInstance.current = new window.LocomotiveScroll({
       el: scrollRef.current,
       direction: 'horizontal',
+      gestureDirection: 'both',
       smooth: true,
       lerp: 0.05,
       tablet: {
@@ -137,64 +148,34 @@ const Gallery = () => {
       <div className="scroll-animations-example" data-scroll-container ref={scrollRef}>
         <div className="scrollsection" data-scroll-section>
           <div className="item -normal" data-scroll data-scroll-speed="2">
-            <img className="image" src="https://picsum.photos/id/1005/300/400" alt="Gallery image" />
+            <img className="image" src="/lovable-uploads/gallery/gallery-01.jpeg" alt="Framed mountain photography in the lodge corridor" />
           </div>
-          <div className="item -big" data-scroll data-scroll-speed="1">
-            <img className="image" src="https://picsum.photos/id/1019/600/800" alt="Gallery image" />
+          <div className="item -big -horizontal" data-scroll data-scroll-speed="1">
+            <img className="image" src="/lovable-uploads/gallery/gallery-04.jpeg" alt="The lodge frontage in Namche Bazaar" />
           </div>
-          <div className="item -small -horizontal" data-scroll data-scroll-speed="4">
-            <img className="image" src="https://picsum.photos/id/1027/400/300" alt="Gallery image" />
+          <div className="item -small" data-scroll data-scroll-speed="4">
+            <img className="image" src="/lovable-uploads/gallery/gallery-03.jpeg" alt="Namche Bazaar seen from the trail above" />
           </div>
-          <div className="item -normal" data-scroll data-scroll-speed="3">
-            <img className="image" src="https://picsum.photos/id/1028/300/400" alt="Gallery image" />
-          </div>
-          <div className="item -normal -horizontal" data-scroll data-scroll-speed="2">
-            <img className="image" src="https://picsum.photos/id/1041/400/300" alt="Gallery image" />
-          </div>
-          <div className="item -big -horizontal" data-scroll data-scroll-speed="4">
-            <img className="image" src="https://picsum.photos/id/1042/800/600" alt="Gallery image" />
-          </div>
-          <div className="item -small" data-scroll data-scroll-speed="2">
-            <img className="image" src="https://picsum.photos/id/1049/300/400" alt="Gallery image" />
-          </div>
-          <div className="item -normal -horizontal" data-scroll data-scroll-speed="1">
-            <img className="image" src="https://picsum.photos/id/1056/300/400" alt="Gallery image" />
-          </div>
-          <div className="item -small -horizontal" data-scroll data-scroll-speed="3">
-            <img className="image" src="https://picsum.photos/id/1062/400/300" alt="Gallery image" />
-          </div>
-          <div className="item -big" data-scroll data-scroll-speed="1">
-            <img className="image" src="https://picsum.photos/id/1068/600/800" alt="Gallery image" />
-          </div>
-          <div className="item -normal -horizontal" data-scroll data-scroll-speed="2">
-            <img className="image" src="https://picsum.photos/id/1069/400/300" alt="Gallery image" />
-          </div>
-          <div className="item -normal -horizontal" data-scroll data-scroll-speed="1">
-            <img className="image" src="https://picsum.photos/id/1072/300/400" alt="Gallery image" />
-          </div>
-          <div className="item -small -horizontal" data-scroll data-scroll-speed="4">
-            <img className="image" src="https://picsum.photos/id/1075/400/300" alt="Gallery image" />
-          </div>
-          <div className="item -big" data-scroll data-scroll-speed="3">
-            <img className="image" src="https://picsum.photos/id/1081/600/800" alt="Gallery image" />
-          </div>
-          <div className="item -normal -horizontal" data-scroll data-scroll-speed="2">
-            <img className="image" src="https://picsum.photos/id/111/400/300" alt="Gallery image" />
-          </div>
-          <div className="item -small -horizontal" data-scroll data-scroll-speed="4">
-            <img className="image" src="https://picsum.photos/id/129/400/300" alt="Gallery image" />
+          <div className="item -normal -horizontal" data-scroll data-scroll-speed="3">
+            <img className="image" src="/lovable-uploads/gallery/gallery-05.jpeg" alt="The dining room and hand-painted bar" />
           </div>
           <div className="item -big" data-scroll data-scroll-speed="2">
-            <img className="image" src="https://picsum.photos/id/137/600/800" alt="Gallery image" />
+            <img className="image" src="/lovable-uploads/gallery/gallery-02.jpeg" alt="The stone-paved lane past the lodge" />
+          </div>
+          <div className="item -small" data-scroll data-scroll-speed="4">
+            <img className="image" src="/lovable-uploads/gallery/gallery-01.jpeg" alt="Framed mountain photography in the lodge corridor" />
           </div>
           <div className="item -normal -horizontal" data-scroll data-scroll-speed="1">
-            <img className="image" src="https://picsum.photos/id/141/300/400" alt="Gallery image" />
+            <img className="image" src="/lovable-uploads/gallery/gallery-04.jpeg" alt="The lodge frontage in Namche Bazaar" />
           </div>
-          <div className="item -small -horizontal" data-scroll data-scroll-speed="3">
-            <img className="image" src="https://picsum.photos/id/145/400/300" alt="Gallery image" />
+          <div className="item -normal" data-scroll data-scroll-speed="3">
+            <img className="image" src="/lovable-uploads/gallery/gallery-03.jpeg" alt="Namche Bazaar seen from the trail above" />
+          </div>
+          <div className="item -small -horizontal" data-scroll data-scroll-speed="2">
+            <img className="image" src="/lovable-uploads/gallery/gallery-05.jpeg" alt="The dining room and hand-painted bar" />
           </div>
           <div className="item -normal" data-scroll data-scroll-speed="1">
-            <img className="image" src="https://picsum.photos/id/147/300/400" alt="Gallery image" />
+            <img className="image" src="/lovable-uploads/gallery/gallery-02.jpeg" alt="The stone-paved lane past the lodge" />
           </div>
         </div>
       </div>
@@ -204,9 +185,16 @@ const Gallery = () => {
           touch-action: pan-x;
           -webkit-overflow-scrolling: touch;
         }
+        /* Override locomotive-scroll's 100vh container so the strip sits at 85vh */
+        .scroll-animations-example[data-scroll-container],
+        [data-scroll-direction="horizontal"] .scroll-animations-example[data-scroll-container],
+        .has-scroll-smooth .scroll-animations-example[data-scroll-container] {
+          height: 85vh;
+          min-height: 85vh;
+        }
         .scroll-animations-example > .scrollsection {
           padding: 10vh 10vh 10vh 10vmax;
-          min-width: 550vh;
+          min-width: 300vh;
         }
         .scroll-animations-example > .scrollsection > .item {
           display: inline-block;
@@ -217,7 +205,7 @@ const Gallery = () => {
         @media (max-width: 768px) {
           .scroll-animations-example > .scrollsection {
             padding: 5vh 5vh 5vh 5vw;
-            min-width: 300vh;
+            min-width: 170vh;
           }
           .scroll-animations-example > .scrollsection > .item {
             margin: 0 -15vh 0 2vh;
@@ -291,9 +279,15 @@ const Gallery = () => {
         .scroll-animations-example > .scrollsection > .item.-small:nth-of-type(4n) {
           bottom: -13vh;
         }
+        /* Tiles overlap by design — the hovered one has to come to the front,
+           so this must sit after the .-normal / .-small z-index rules above. */
+        .scroll-animations-example > .scrollsection > .item:hover {
+          z-index: 30;
+        }
         .scroll-animations-example > .scrollsection > .item > .image {
           height: 100%;
           width: 100%;
+          object-fit: cover;
           position: absolute;
           top: 0;
           left: 0;
@@ -337,9 +331,11 @@ const Gallery = () => {
           position: absolute;
           top: 0;
           left: 0;
+          z-index: 30;
           filter: grayscale(0);
           opacity: 1;
           cursor: pointer;
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
         }
       `}</style>
     

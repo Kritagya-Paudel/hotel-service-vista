@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import Header from "@/components/about/Header";
 import HeroSection from "@/components/HeroSection";
 import HeartOfHimalayasSection from "@/components/HeartOfHimalayasSection";
@@ -11,6 +12,7 @@ import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
+  usePageTitle("Khumbu Lodge — Namche Bazaar, Everest Region", "A family-run Sherpa lodge in Namche Bazaar, welcoming trekkers and climbers since 1973.");
   useScrollReveal();
 
   return (

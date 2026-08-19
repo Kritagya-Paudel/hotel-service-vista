@@ -19,13 +19,14 @@ const WelcomeSection = () => {
             <img 
               src="/lovable-uploads/Khumbu-front.jpeg" 
               alt="Khumbu Lodge Entrance"
+              loading="lazy"
               className="w-full h-[43rem] object-cover"
             />
           </div>
           
           <div className="order-1 lg:order-2 flex flex-col justify-center space-y-4 md:space-y-6">
             <h3 className="font-AvenirBlack text-xl md:text-2xl lg:text-3xl font-serif text-ocean-blue leading-relaxed">
-              Since 1927, the Khumnu Lodge has embodied alpine charm, blending tradition with modern luxury. Thoughtfully expanded over the years, it retains its nostalgic family atmosphere while offering exceptional comfort.
+              Since 1973, Khumbu Lodge has embodied Himalayan warmth, blending tradition with modern luxury. Thoughtfully expanded over the years, it retains its nostalgic family atmosphere while offering exceptional comfort.
             </h3>
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
               Now guided by the Sherpa family who founded it decades ago, Khumbu Lodge has changed little in spirit. The rooms are warmer, the meals heartier, yet the feeling endures: a home built for high mountain life, where trekkers are greeted with easy familiarity and cared for as if they’ve been here before.            </p>

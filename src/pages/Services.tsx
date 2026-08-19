@@ -1,15 +1,11 @@
 import Header from "@/components/about/Header";
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import HeartOfHimalayasSection from "@/components/HeartOfHimalayasSection";
-import SherpaLegacySection from "@/components/SherpaLegacySection";
-import RoomsSection from "@/components/RoomsSection";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import ServicesSection from "@/components/ServicesSection";
-import TestimonialSection from "@/components/TestimonialSection";
 import HotelInformationSection from "@/components/HotelInformationSection";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Services = () => {
+  usePageTitle("Services — Khumbu Lodge", "What's included in your stay at Khumbu Lodge, Namche Bazaar.");
   return (
     <div className="min-h-screen">
       <Header />
@@ -20,4 +16,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Services;

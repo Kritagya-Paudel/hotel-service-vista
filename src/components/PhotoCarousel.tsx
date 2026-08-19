@@ -11,28 +11,28 @@ import {
 const carouselImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop",
-    alt: "Luxurious hotel living room with modern amenities"
+    src: "/lovable-uploads/gallery/gallery-04.jpeg",
+    alt: "The lodge frontage in Namche Bazaar, with Himalayan Java Coffee below"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
-    alt: "Alpine wildlife and mountain scenery"
+    src: "/lovable-uploads/gallery/gallery-05.jpeg",
+    alt: "The dining room and hand-painted bar at the heart of the lodge"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop",
-    alt: "Evening ambiance with warm lighting"
+    src: "/lovable-uploads/gallery/gallery-01.jpeg",
+    alt: "Framed mountain photography lining the lodge corridor"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop",
-    alt: "Serene mountain lake surrounded by trees"
+    src: "/lovable-uploads/gallery/gallery-02.jpeg",
+    alt: "The stone-paved lane running past the lodge in Namche Bazaar"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop",
-    alt: "Mountain river valley with dramatic clouds"
+    src: "/lovable-uploads/gallery/gallery-03.jpeg",
+    alt: "Namche Bazaar seen from the trail above, cupped in its mountain bowl"
   }
 ];
 

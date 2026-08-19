@@ -30,10 +30,8 @@ const App = () => (
 
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/single-room" element={<SingleRoom />} />
-          <Route path="/stay/double-room" element={<SingleRoom />} />
-          <Route path="/stay/junior-suite" element={<SingleRoom />} />
-          <Route path="/stay/suite" element={<SingleRoom />} />
+          <Route path="/stay/basic-standard-room" element={<SingleRoom />} />
+          <Route path="/stay/deluxe-double-room" element={<SingleRoom />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/booking" element={<Booking />} />

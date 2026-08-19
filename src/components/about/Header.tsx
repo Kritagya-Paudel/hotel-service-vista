@@ -1,12 +1,26 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useLenis } from "@/lib/lenis";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const lenis = useLenis();
+
+  // Keep the page from scrolling underneath the full-screen menu.
+  useEffect(() => {
+    if (!isOpen) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    lenis?.stop();
+    return () => {
+      document.body.style.overflow = previous;
+      lenis?.start();
+    };
+  }, [isOpen, lenis]);
 
   const handleClose = () => {
     setIsClosing(true);
@@ -28,7 +42,9 @@ const Header = () => {
           {/* Hamburger Menu */}
           <button 
             className="flex flex-col space-y-1 p-2 z-50"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => (isOpen ? handleClose() : setIsOpen(true))}
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? (
               <X className="w-6 h-6 text-forest-green" />
@@ -51,12 +67,8 @@ const Header = () => {
           
           {/* Book Button */}
           <div className="flex items-center">
-            <Button className="bg-primary hover:bg-secondary text-primary-foreground rounded-none px-4 md:px-8 text-xs uppercase tracking-[0.25em]">
-              <Link 
-              to="/booking"
-              onClick={handleMenuItemClick}>
-                Book
-              </Link>
+            <Button asChild className="bg-primary hover:bg-secondary text-primary-foreground rounded-none px-4 md:px-8 text-xs uppercase tracking-[0.25em]">
+              <Link to="/booking">Book</Link>
             </Button>
           </div>
         </div>

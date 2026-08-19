@@ -10,34 +10,28 @@ import { Plus } from 'lucide-react';
 
 const hotelInfo = [
   {
-    id: 'cancellation',
+    id: 'rooms',
     number: '01',
-    title: 'CANCELLATION POLICY',
-    content: 'Free cancellation up to 48 hours before arrival. Cancellations made within 48 hours of arrival will be charged one night\'s accommodation. No-show reservations will be charged the full stay amount.'
+    title: 'ROOMS & APARTMENTS',
+    content: 'Khumbu Lodge offers 20 rooms with attached bathrooms, 25 normal private rooms to cater to budget travellers without compromising comfort, and 9 fully furnished apartments for long-term stays. Different ranges of rooms suit every budget.'
   },
   {
-    id: 'combinations',
-    number: '02', 
-    title: 'ROOM COMBINATIONS',
-    content: 'Our rooms can be combined to create larger accommodations for families or groups. Connecting rooms are available upon request and subject to availability. Please contact us directly to arrange special room configurations.'
+    id: 'restaurant',
+    number: '02',
+    title: 'RESTAURANT',
+    content: 'Our restaurant serves local delicacies through to international cuisine, enjoyed with a 360 degree view of Namche and the majestic mountains around it.'
   },
   {
-    id: 'arrival',
+    id: 'location',
     number: '03',
-    title: 'ARRIVAL INFORMATION',
-    content: 'Check-in begins at 3:00 PM. Early check-in may be available upon request. We recommend arriving before 6:00 PM to enjoy our welcome reception. Airport transfers can be arranged through our concierge service.'
+    title: 'LOCATION',
+    content: 'Namche Bazar-3, Solukhumbu, Nepal — at 3,443 metres, the gateway to Mt. Everest Base Camp. The lodge sits in the centre of Namche, with more than four decades of history and reputation lining its corridors.'
   },
   {
-    id: 'checkin',
+    id: 'reservations',
     number: '04',
-    title: 'CHECK-IN & CHECK OUT',
-    content: 'Standard check-in: 3:00 PM | Standard check-out: 11:00 AM. Late check-out is available until 2:00 PM for an additional fee. Express check-out service is available through your in-room tablet or mobile app.'
-  },
-  {
-    id: 'rates',
-    number: '05',
-    title: 'RATES',
-    content: 'All rates include breakfast, access to spa facilities, and Wi-Fi. Seasonal rates apply during peak periods. Children under 12 stay free when sharing with parents. Group discounts available for bookings of 5+ rooms.'
+    title: 'RESERVATIONS & ENQUIRIES',
+    content: 'Rates, availability, arrival times and cancellation terms are confirmed directly with us. Write to info@khumbulodge.com or call +977 38-540144 / 540166, and we will answer with everything you need for your stay.'
   }
 ];
 
@@ -54,7 +48,7 @@ const HotelInformationSection = () => {
             Hotel &amp; Room <em className="italic">Information</em>
           </h2>
           <p className="font-AvenirLight text-foreground/80 text-lg max-w-2xl mx-auto">
-            Information for your stay at Khumbu Lodge
+            What we can tell you before you arrive — and how to reach us for the rest
           </p>
         </div>
 

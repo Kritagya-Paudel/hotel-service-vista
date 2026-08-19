@@ -5,79 +5,46 @@ import Header from "@/components/about/Header";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Link, useLocation } from 'react-router-dom';
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const allRooms = [
   {
-    path: '/single-room',
-    title: 'Single Room',
-    subtitle: 'A space to call your own.',
-    heroImage: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d495dda78da5679a8b9_67ba9babd4f2f9bed4b2474f_single-room-hero-shot.jpeg',
-    badges: ['Single Bed', '1-2 Guests', '20m²', '25m²'],
-    overviewHeading: "Ideal for solo travelers or shorter visits, our single rooms are quietly appointed for comfort, warmth, and a good night's rest after a day on the mountain.",
+    path: '/stay/basic-standard-room',
+    title: 'Basic Standard Room',
+    subtitle: 'Simple comfort, warmly kept.',
+    heroImage: '/lovable-uploads/rooms/basic-standard-01.jpeg',
+    badges: ['1 Bed', '1-2 Guests', 'Attached Bath'],
+    overviewHeading: "A quiet, well-kept private room with a comfortable bed and an attached bathroom with running hot water \u2014 everything you need after a day on the trail.",
     overviewBody: [
-      "Our smallest rooms are shaped by the same attention to comfort and calm as our grandest suites. Designed for solo stays—whether you're here for early mornings on the slopes or simply in need of a room of your own—each space offers a well-proportioned retreat: handsome woods, crisp linens, and the gentle hush that follows a day on skis.",
-      "Furnished with a sportsman's sensibility and a sense of order, the room includes a comfortable single bed, a writing desk or reading chair, and a modern bath with either a walk-in shower or tub. Ranging from 20m² to 25m², these rooms are especially well-suited to seasoned skiers traveling alone or older children or teenagers in need of their own space.",
+      "Our standard rooms are the heart of the lodge: warm wood panelling, crisp white linen, and a bed made up fresh each morning. They are the rooms trekkers come back to season after season, kept simple on purpose and looked after with care.",
+      "Each room has its own bathroom with running hot water, reading lamps at the bedside, and a window onto Namche. Ideal for solo walkers and couples spending a night or two acclimatising before heading further up the valley.",
     ],
     carouselImages: [
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f5e733ce8316bd12ef_67baba9384b37ae060888bbe_single-room-shot1.jpeg', label: 'Single Room', caption: 'Comfortable Bed' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed7735c51b2eca2c56d71c_67babaa3cccac9623961e883_single-room-shot3.jpeg', label: 'Single Room', caption: 'Stunning Mountain Views' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f52f5f20f028b3f6d1_67cfb4713bdd5083ba0e7482_Zi_114_43.jpeg', label: 'Single Room', caption: 'Cosy & Warm' },
+      { src: '/lovable-uploads/rooms/basic-standard-01.jpeg', label: 'Basic Standard Room', caption: 'Comfortable Bed' },
+      { src: '/lovable-uploads/rooms/basic-standard-02.jpeg', label: 'Basic Standard Room', caption: 'Warm Wooden Interior' },
     ],
-    amenities: ['Full board', 'Complimentary Wi-Fi', 'Flatscreen TV & cable channels', 'Writing desk & workspace', '24 hour room service', 'Robes & slippers', 'Mini bar', 'Safe for valuables', 'Hairdryer & luxury bath products', 'Shower', 'Telephone with concierge access', 'Single Bed'],
+    amenities: ['Attached bathroom with running hot water', 'Fresh linen and warm bedding', 'Wood-panelled interior', 'Bedside reading lamps', 'Luggage rack', 'Daily housekeeping', 'Wi-Fi available', 'Charging points', 'Dining room meals', 'Hot drinks service'],
   },
   {
-    path: '/stay/double-room',
-    title: 'Double Room',
-    subtitle: 'Spacious, serene, made for two.',
-    heroImage: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d498111e949aab39f64_67cfb4c113e8d1dbe5ed8127_Zi_227_A.jpeg',
-    badges: ['Double Bed', '2 Guests', '20m²', '25m²'],
-    overviewHeading: "Our spacious double rooms offer comfort and style, perfect for couples or solo travelers seeking extra space and mountain serenity.",
+    path: '/stay/deluxe-double-room',
+    title: 'Deluxe Double Room',
+    subtitle: 'More space, more light, room for two.',
+    heroImage: '/lovable-uploads/rooms/deluxe-double-01.jpeg',
+    badges: ['2 Beds', '2-3 Guests', 'Mountain Views'],
+    overviewHeading: "Our largest rooms, with two beds, a sitting area by the window, and views out over Namche Bazaar.",
     overviewBody: [
-      "Thoughtfully designed for two, our double rooms balance warmth and elegance. Wake to Himalayan views, settle into a plush double bed, and enjoy every amenity you need for a restful stay in Namche Bazaar.",
-      "Ranging from 20m² to 25m², the double rooms are furnished with quality linens, a modern bathroom, and the kind of quiet comfort that makes high-altitude life feel effortless.",
+      "The deluxe rooms give you space to spread out: two full beds, corner windows on two walls, and armchairs set around a low table where the afternoon light comes in. Good for friends travelling together, families, or anyone settling in for a few days.",
+      "Like every room at the lodge, they come with an attached bathroom and running hot water, and the same Sherpa hospitality that has kept guests returning to Namche since 1973.",
     ],
     carouselImages: [
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d498111e949aab39f64_67cfb4c113e8d1dbe5ed8127_Zi_227_A.jpeg', label: 'Double Room', caption: 'Spacious Double Bed' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f5e733ce8316bd12ef_67baba9384b37ae060888bbe_single-room-shot1.jpeg', label: 'Double Room', caption: 'Mountain Views' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f52f5f20f028b3f6d1_67cfb4713bdd5083ba0e7482_Zi_114_43.jpeg', label: 'Double Room', caption: 'Warm Interior' },
+      { src: '/lovable-uploads/rooms/deluxe-double-01.jpeg', label: 'Deluxe Double Room', caption: 'Two Beds, Made Up Fresh' },
+      { src: '/lovable-uploads/rooms/deluxe-double-02.jpeg', label: 'Deluxe Double Room', caption: 'Windows Over the Village' },
+      { src: '/lovable-uploads/rooms/deluxe-double-03.jpeg', label: 'Deluxe Double Room', caption: 'Sitting Area by the Window' },
+      { src: '/lovable-uploads/rooms/deluxe-double-04.jpeg', label: 'Deluxe Double Room', caption: 'Corner Windows on Two Walls' },
+      { src: '/lovable-uploads/rooms/deluxe-double-05.jpeg', label: 'Deluxe Double Room', caption: 'Room to Spread Out' },
+      { src: '/lovable-uploads/rooms/deluxe-double-06.jpeg', label: 'Deluxe Double Room', caption: 'Warm Wooden Interior' },
     ],
-    amenities: ['Full board', 'Complimentary Wi-Fi', 'Flatscreen TV & cable channels', 'Writing desk & workspace', '24 hour room service', 'Robes & slippers', 'Mini bar', 'Safe for valuables', 'Hairdryer & luxury bath products', 'Bathtub & shower', 'Telephone with concierge access', 'Double Bed'],
-  },
-  {
-    path: '/stay/junior-suite',
-    title: 'Junior Suite',
-    subtitle: 'Tailored for those who stay awhile.',
-    heroImage: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d4954913f47bdbc1746_67bad5d3a3ae7caf3534b1ae_Zi_208_A%2520(1).jpeg',
-    badges: ['Double Bed', '2 Guests', '40m²', '65m²'],
-    overviewHeading: "Elegantly designed, our Junior Suites offer a refined retreat with added space, sitting area, and the comfort of a home away from home.",
-    overviewBody: [
-      "The Junior Suite is perfect for those seeking a little more room to breathe. With a generous layout spanning 40m² to 65m², it includes a separate sitting area, a premium double bed, and sweeping views of the Namche valley.",
-      "Every detail has been considered — from the hand-selected furnishings to the deep-soak bathtub. Whether you're here for acclimatization or simply lingering in the mountains, the Junior Suite is your private sanctuary.",
-    ],
-    carouselImages: [
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d4954913f47bdbc1746_67bad5d3a3ae7caf3534b1ae_Zi_208_A%2520(1).jpeg', label: 'Junior Suite', caption: 'Elegant Living Space' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed76f5e733ce8316bd12ef_67baba9384b37ae060888bbe_single-room-shot1.jpeg', label: 'Junior Suite', caption: 'Premium Comfort' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d498111e949aab39f64_67cfb4c113e8d1dbe5ed8127_Zi_227_A.jpeg', label: 'Junior Suite', caption: 'Serene Retreat' },
-    ],
-    amenities: ['Full board', 'Complimentary Wi-Fi', 'Flatscreen TV & cable channels', 'Sitting area', '24 hour room service', 'Robes & slippers', 'Mini bar', 'Safe for valuables', 'Hairdryer & luxury bath products', 'Bathtub & shower combination', 'Telephone with concierge access', 'Double Bed'],
-  },
-  {
-    path: '/stay/suite',
-    title: 'Suite',
-    subtitle: 'A private world above the snowline.',
-    heroImage: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d49ff89f562bf58917a_67cfbbbb988fc9ffda14cb50_Zi_307_A.jpeg',
-    badges: ['King Bed', '2 Guests', '63m²', '80m²'],
-    overviewHeading: "Generous in scale and graceful in design, our suites offer the quiet luxury of space, privacy, and expansive mountain views.",
-    overviewBody: [
-      "The Suite is our most spacious and indulgent offering — a private world above the snowline. Spanning 63m² to 80m², it features a king-sized bed, a generous lounge, and panoramic windows framing the Himalayan peaks.",
-      "Perfect for longer stays or travelers who appreciate the finest details, the Suite delivers every comfort with understated elegance. The Sherpa family's hospitality is felt in every corner — from the hand-woven textiles to the morning tea brought at your preferred hour.",
-    ],
-    carouselImages: [
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d49ff89f562bf58917a_67cfbbbb988fc9ffda14cb50_Zi_307_A.jpeg', label: 'Suite', caption: 'King Bed & Lounge' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d4954913f47bdbc1746_67bad5d3a3ae7caf3534b1ae_Zi_208_A%2520(1).jpeg', label: 'Suite', caption: 'Panoramic Views' },
-      { src: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d498111e949aab39f64_67cfb4c113e8d1dbe5ed8127_Zi_227_A.jpeg', label: 'Suite', caption: 'Private Sanctuary' },
-    ],
-    amenities: ['Full board', 'Complimentary Wi-Fi', 'Flatscreen TV & cable channels', 'Private lounge area', '24 hour butler service', 'Robes & slippers', 'Fully stocked mini bar', 'In-room safe', 'Hairdryer & luxury bath products', 'Bathtub & rainfall shower', 'Telephone with concierge access', 'King Bed'],
+    amenities: ['Attached bathroom with running hot water', 'Two full beds', 'Sitting area with armchairs', 'Windows on two walls', 'Views over Namche Bazaar', 'Fresh linen and warm bedding', 'Luggage rack', 'Daily housekeeping', 'Wi-Fi available', 'Charging points', 'Dining room meals', 'Hot drinks service'],
   },
 ];
 
@@ -85,6 +52,7 @@ const SingleRoom = () => {
   const { pathname } = useLocation();
   const room = allRooms.find(r => r.path === pathname) ?? allRooms[0];
   const otherRooms = allRooms.filter(r => r.path !== pathname);
+  usePageTitle(`${room.title} — Khumbu Lodge`, room.overviewHeading);
 
   return (
     <div className="min-h-screen bg-background">
@@ -137,8 +105,8 @@ const SingleRoom = () => {
                 <h2 className="text-3xl lg:text-4xl font-serif text-primary font-BOONE leading-tight mb-8">
                   {room.overviewHeading}
                 </h2>
-                <Button className="bg-ocean-blue hover:bg-steel-blue text-white rounded-none px-3 md:px-6 text-sm">
-                  Book this Room
+                <Button asChild className="bg-ocean-blue hover:bg-steel-blue text-white rounded-none px-3 md:px-6 text-sm">
+                  <Link to="/booking">Book this Room</Link>
                 </Button>
               </div>
               <div className="space-y-6 lg:text-base font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
@@ -178,7 +146,7 @@ const SingleRoom = () => {
       <section className="relative min-h-screen py-20 flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('https://cdn.prod.website-files.com/67500d660a7c1d5d2c48fbc6/67bacc129296863ae1896ae5_LoruenserZimmerservice_200-hero.jpg')` }}
+          style={{ backgroundImage: `url('/lovable-uploads/rooms/room-amenities.jpeg')` }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
@@ -214,7 +182,7 @@ const SingleRoom = () => {
         <div className="justify-start items-center w-full flex pt-24 pb-7 flex-col">
           <div className="justify-start items-center flex blur-none opacity-100 flex-col">
             <h2 className="font-normal text-[2.5rem] leading-tight tracking-[-1px] sm:text-[3.5rem] md:text-[5rem] lg:text-[88px] lg:leading-[88px] lg:tracking-[-3.52px] text-ocean-blue text-center my-0 font-BOONE">
-              Other Rooms &amp; Suites
+              Other Rooms
             </h2>
             <div className="gap-x-7 gap-y-7 justify-start items-center w-full flex mt-7 mb-10 md:mb-24 flex-col lg:w-4/5">
               <p className="text-forest-green text-[19.2px] leading-[23.04px] font-normal tracking-[-0.192px] text-center my-0 sm:tracking-[-0.025rem] font-AvenirBlack">
@@ -224,6 +192,26 @@ const SingleRoom = () => {
           </div>
         </div>
 
+        {/* With a single other room there is nothing to scroll, so show it centred
+            rather than as a one-slide carousel stuck to the left edge. */}
+        {otherRooms.length === 1 ? (
+          <div className="w-full max-w-5xl mx-auto">
+            <Link to={otherRooms[0].path} className="block group">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                <img
+                  src={otherRooms[0].heroImage}
+                  alt={otherRooms[0].title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                  <h3 className="text-white text-2xl md:text-3xl font-BOONE">{otherRooms[0].title}</h3>
+                  <p className="text-white/90 text-sm mt-1 font-AvenirBlack">{otherRooms[0].subtitle}</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ) : (
         <div className="relative w-full">
           <Carousel className="w-full" opts={{ loop: true, align: 'center' }}>
             <CarouselContent className="-ml-4">
@@ -231,7 +219,7 @@ const SingleRoom = () => {
                 <CarouselItem key={r.path} className="pl-4 basis-[85%] md:basis-[90%]">
                   <Link to={r.path} className="block">
                     <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
-                      <img src={r.heroImage} alt={r.title} className="w-full h-full object-cover" />
+                      <img src={r.heroImage} alt={r.title} loading="lazy" className="w-full h-full object-cover" />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                         <h3 className="text-white text-2xl md:text-3xl font-BOONE">{r.title}</h3>
                         <p className="text-white/90 text-sm mt-1 font-AvenirBlack">{r.subtitle}</p>
@@ -247,6 +235,7 @@ const SingleRoom = () => {
             </div>
           </Carousel>
         </div>
+        )}
       </section>
 
       <Footer />

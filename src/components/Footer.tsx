@@ -15,12 +15,22 @@ const Footer = () => {
               
               <div className="space-y-2 text-background">
                 <h3 className="font-Editorial italic text-2xl mb-4">Contact Us</h3>
-                <p className="font-AvenirLight">Khumbu Lodge, Namche Bazaar,</p>
+                <p className="font-AvenirLight">Khumbu Lodge, Namche Bazar-3,</p>
                 <p className="font-AvenirLight">Solukhumbu, Nepal</p>
 
                 <div className="pt-4 space-y-2 font-AvenirLight text-sm tracking-[0.15em]">
-                  <p className="text-background/70 underline underline-offset-4">INFO@KHUMBULODGE.COM</p>
-                  <p className="text-background/70">+977 123-456789</p>
+                  <a
+                    href="mailto:info@khumbulodge.com"
+                    className="block text-background/70 underline underline-offset-4 hover:text-background transition-colors"
+                  >
+                    INFO@KHUMBULODGE.COM
+                  </a>
+                  <a
+                    href="tel:+97738540144"
+                    className="block text-background/70 hover:text-background transition-colors"
+                  >
+                    +977 38-540144
+                  </a>
                 </div>
               </div>
           </div>
@@ -41,14 +51,14 @@ const Footer = () => {
       </div>
 
       <p className="font-AvenirLight text-background/75 max-w-md mb-8">
-        Established in 1971, Khumbu Lodge has been a warm home to trekkers and climbers 
+        Established in 1973, Khumbu Lodge has been a warm home to trekkers and climbers 
         on their journey to Everest. Over the decades, we have welcomed adventurers, 
         dignitaries, and travelers from around the world — including former US President Jimmy Carter. 
         Here, hospitality meets the Himalayas.
       </p>
       
-      <Button className="bg-secondary hover:bg-background hover:text-primary text-secondary-foreground rounded-none px-10 py-6 text-xs tracking-[0.25em] uppercase transition-colors">
-        <a href="/booking">Book Your Stay</a>
+      <Button asChild className="bg-secondary hover:bg-background hover:text-primary text-secondary-foreground rounded-none px-10 py-6 text-xs tracking-[0.25em] uppercase transition-colors">
+        <Link to="/booking">Book Your Stay</Link>
       </Button>
   </div>
 
@@ -74,10 +84,22 @@ const Footer = () => {
     </nav>
 
     <div className="flex space-x-4 mt-8 justify-center">
-      <a href="#" className="text-background/70 hover:text-background transition-colors">
+      <a
+        href="https://www.instagram.com/khumbulodge/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Khumbu Lodge on Instagram"
+        className="text-background/70 hover:text-background transition-colors"
+      >
         <Instagram className="h-5 w-5" />
       </a>
-      <a href="#" className="text-background/70 hover:text-background transition-colors">
+      <a
+        href="https://www.facebook.com/KhumbuLodge"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Khumbu Lodge on Facebook"
+        className="text-background/70 hover:text-background transition-colors"
+      >
         <Facebook className="h-5 w-5" />
       </a>
     </div>
@@ -88,7 +110,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-background/60 text-sm">© 2025 Khumbu Lodge</p>
+            <p className="text-background/60 text-sm">© 2026 Khumbu Lodge</p>
             {/* <div className="flex space-x-6 text-sm">
               <a href="#" className="text-muted hover:text-background underline transition-colors">Privacy</a>
               <a href="#" className="text-muted hover:text-background underline transition-colors">Imprint</a>

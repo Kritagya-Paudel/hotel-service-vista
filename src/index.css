@@ -110,6 +110,26 @@ All colors MUST be HSL.
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-parallax {
+    transform: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Hero parallax */
 .hero-parallax {
   will-change: transform;
@@ -117,9 +137,6 @@ All colors MUST be HSL.
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
 
   * {
     @apply border-border;
@@ -133,129 +150,12 @@ All colors MUST be HSL.
   ::selection {
     @apply bg-primary text-primary-foreground;
   }
-}
 
-/* Responsive styles for Rooms Section - Inverted behavior */
-/* Desktop shows single column (mobile-like layout) */
-@media screen and (max-width: 479px) {
-  .DTYucH {
-    @apply pb-7;
-  }
-  .rAczqT {
-    @apply w-full;
-  }
-  .mbLkWu {
-    @apply tracking-[-0.025rem];
-  }
-  .mgAunl {
-    @apply aspect-[2/2.5] w-full;
-  }
-  .NtjusO {
-    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
-  }
-  .EbwMWQ {
-    @apply w-full;
-  }
-  .vjOMKl {
-    @apply aspect-[2/2.5] w-full;
-  }
-  .zmUMVH {
-    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
-  }
-  .pLsiaO {
-    @apply w-full;
-  }
-  .nPpNgi {
-    @apply aspect-[2/2.5] w-full;
-  }
-  .UHeaaL {
-    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
-  }
-  .udlPPt {
-    @apply w-full;
-  }
-  .EPUaXE {
-    @apply aspect-[2/2.5] w-full;
-  }
-  .GihdOD {
-    @apply pt-0.5 pb-0 inset-[auto_auto_0%_0%];
-  }
-  .qxIbvf {
-    @apply w-full;
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-secondary;
+    outline-style: solid;
   }
 }
-@media screen and (max-width: 991px) {
-  .NjcSxy {
-    @apply pb-0;
-  }
-  .rAczqT {
-    @apply w-4/5;
-  }
-  .cAIVPu {
-    @apply gap-y-20 grid-cols-[1fr];
-  }
-  .mgAunl {
-    @apply aspect-[3/2] w-full;
-  }
-  .wvwipb {
-    @apply text-[15.2px];
-  }
-  .MLXtMh {
-    @apply text-[15.2px];
-  }
-  .VMBjMo {
-    @apply text-[15.2px];
-  }
-  .EbwMWQ {
-    @apply w-full;
-  }
-  .vjOMKl {
-    @apply aspect-[3/2] w-full;
-  }
-  .aJeoqq {
-    @apply text-[15.2px];
-  }
-  .ZWlTgj {
-    @apply text-[15.2px];
-  }
-  .owbQjJ {
-    @apply text-[15.2px];
-  }
-  .pLsiaO {
-    @apply w-full;
-  }
-  .nPpNgi {
-    @apply aspect-[3/2] w-full;
-  }
-  .UMVXdb {
-    @apply text-[15.2px];
-  }
-  .AWWsQc {
-    @apply text-[15.2px];
-  }
-  .cnfuQg {
-    @apply text-[15.2px];
-  }
-  .udlPPt {
-    @apply w-full;
-  }
-  .EPUaXE {
-    @apply aspect-[3/2] w-full;
-  }
-  .eesEkM {
-    @apply text-[15.2px];
-  }
-  .LNWgHU {
-    @apply text-[15.2px];
-  }
-  .bdsdDi {
-    @apply text-[15.2px];
-  }
-  .qxIbvf {
-    @apply w-full;
-  }
-}
-
 
 @font-face {
     font-family: 'BOONE';

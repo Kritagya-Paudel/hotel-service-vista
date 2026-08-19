@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-lg md:text-xl font-serif mb-3 md:mb-4">Khumbu Lodge</h3>
             <p className="text-xs md:text-sm text-sky-blue leading-relaxed">
-              A legacy of alpine hospitality since 1927.
+              A legacy of alpine hospitality since 1973.
             </p>
           </div>
           <div>
@@ -33,7 +33,7 @@ const Footer = () => {
             <h4 className="font-medium mb-3 md:mb-4 text-sm md:text-base">Contact</h4>
             <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-sky-blue">
               <li>Namche Bazaar, Nepal</li>
-              <li>+977 123-456789</li>
+              <li>+977 38-540144</li>
               <li>info@khumbulodge.com</li>
             </ul>
           </div>

@@ -4,15 +4,27 @@ const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    const skipParallax =
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+      window.matchMedia('(max-width: 768px)').matches;
+    if (skipParallax) return;
+
+    let frame = 0;
     const onScroll = () => {
-      if (!videoRef.current) return;
-      const scrollY = window.scrollY;
-      // Video moves at half scroll speed (parallax)
-      videoRef.current.style.transform = `translateY(${scrollY * 0.4}px)`;
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        if (!videoRef.current) return;
+        // Video moves at a fraction of scroll speed (parallax)
+        videoRef.current.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+      });
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   return (

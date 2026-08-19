@@ -18,7 +18,7 @@ const SherpaLegacySection = () => {
 
         <div className="font-AvenirLight space-y-6 text-foreground max-w-2xl mx-auto">
           <p className="text-base md:text-lg leading-relaxed">
-            Since 1975, Khumbu Lodge has stood as a beacon of warmth and tradition in Namche Bazaar—the vibrant gateway to Everest.
+            Since 1973, Khumbu Lodge has stood as a beacon of warmth and tradition in Namche Bazaar—the vibrant gateway to Everest.
           </p>
 
           <p className="text-base md:text-lg leading-relaxed">

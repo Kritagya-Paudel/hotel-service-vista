@@ -4,42 +4,23 @@ import { Link } from 'react-router-dom';
 
 const rooms = [
   {
-    id: 'single-room',
-    title: 'Single Room',
-    subtitle: 'A space to call your own.',
-    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d495dda78da5679a8b9_67ba9babd4f2f9bed4b2474f_single-room-hero-shot.jpeg',
-    description: 'Ideal for solo travelers or shorter visits, our single rooms are quietly appointed for comfort, warmth, and a good night\'s rest after a day on the mountain.',
-    link: '/single-room',
-    badges: ['Single Bed', '1-2 Guests', '20m² - 25m²']
+    id: 'basic-standard-room',
+    title: 'Basic Standard Room',
+    subtitle: 'Simple comfort, warmly kept.',
+    image: '/lovable-uploads/rooms/basic-standard-01.jpeg',
+    description: 'A quiet, well-kept private room with a comfortable bed, wood-panelled walls, and an attached bathroom with running hot water — everything you need after a day on the trail.',
+    link: '/stay/basic-standard-room',
+    badges: ['1 Bed', '1-2 Guests', 'Attached Bath']
   },
   {
-    id: 'double-room',
-    title: 'Double Room',
-    subtitle: 'Spacious, serene, made for two.',
-    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d498111e949aab39f64_67cfb4c113e8d1dbe5ed8127_Zi_227_A.jpeg',
-    description: 'Our spacious double rooms offer comfort and style, perfect for couples or solo travelers seeking extra space.',
-    link: '/stay/double-room',
-    badges: ['Double Bed', '2 Guests', '20m² - 25m²']
+    id: 'deluxe-double-room',
+    title: 'Deluxe Double Room',
+    subtitle: 'More space, more light, room for two.',
+    image: '/lovable-uploads/rooms/deluxe-double-01.jpeg',
+    description: 'Our largest rooms, with two beds, a sitting area by the window, and views over Namche — ideal for friends, families, or anyone who likes room to spread out.',
+    link: '/stay/deluxe-double-room',
+    badges: ['2 Beds', '2-3 Guests', 'Mountain Views']
   },
-  {
-    id: 'junior-suite',
-    title: 'Junior Suite',
-    subtitle: 'Tailored for those who stay awhile.',
-    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d4954913f47bdbc1746_67bad5d3a3ae7caf3534b1ae_Zi_208_A%2520(1).jpeg',
-    description: 'Elegantly designed, our Junior Suites offer a refined retreat with added space and comfort.',
-    link: '/stay/junior-suite',
-    badges: ['Double Bed', '2 Guests', '40m² - 65m²']
-  },
-  {
-    id: 'suite',
-    title: 'Suite',
-    subtitle: 'A private world above the snowline.',
-    image: 'https://cdn.prod.website-files.com/6797112f279bdfb959535252/67ed5d49ff89f562bf58917a_67cfbbbb988fc9ffda14cb50_Zi_307_A.jpeg',
-    description: 'Generous in scale and graceful in design, our suites offer the quiet luxury of space, privacy, and expansive mountain views—perfect for longer stays or those who travel with family.',
-    link: '/stay/suite',
-    badges: ['King Bed', '2 Guests', '63m² - 80m²']
-  },
-  
 ];
 
 const RoomsSection = () => {
@@ -63,7 +44,7 @@ const RoomsSection = () => {
           </p>
           {/* Main heading */}
           <h2 className="font-Editorial text-[2.5rem] leading-tight tracking-[-1px] sm:text-[3.5rem] md:text-[5rem] lg:text-[88px] lg:leading-[88px] lg:tracking-[-3.52px] text-primary text-center my-0">
-            Our Rooms &amp; <em className="italic">Suites</em>
+            Our <em className="italic">Rooms</em>
           </h2>
 
           {/* Description */}

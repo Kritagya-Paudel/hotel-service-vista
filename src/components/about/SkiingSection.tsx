@@ -19,7 +19,7 @@ const SkiingSection = () => {
                       <span className="italic">Hospitality at the Top of the World</span>
                     </h2>
                     <p className="font-AvenirBlack text-sm md:text-lg lg:text-2xl font-medium text-steel-blue mb-4 md:mb-8 leading-relaxed">
-                      Established in 1975 in Namche Bazaar, Khumbu Lodge has been welcoming trekkers, mountaineers, and travelers from all over the globe for nearly five decades.
+                      Established in 1973 in Namche Bazaar, Khumbu Lodge has been welcoming trekkers, mountaineers, and travelers from all over the globe for nearly five decades.
                     </p>
                     <p className="text-sm md:text-base text-forest-green mb-3 md:mb-4 leading-relaxed">
                       As one of the oldest family-run lodges in the Everest region, we pride ourselves on warm Sherpa hospitality and unmatched comfort. Whether you are acclimatizing on your way to Everest Base Camp or seeking a peaceful stay in Namche, our lodge offers the perfect retreat surrounded by the grandeur of the Himalayas.

@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/about/Header";
 // import Footer from "@/components/about/Footer";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin,Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 
 const formSchema = z.object({
   firstName: z.string().trim().min(1, { message: "First name is required" }).max(100),
@@ -26,6 +27,7 @@ const formSchema = z.object({
 });
 
 const Booking = () => {
+  usePageTitle("Book Your Stay — Khumbu Lodge", "Enquire about a stay at Khumbu Lodge in Namche Bazaar, Everest region.");
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -75,13 +77,19 @@ const Booking = () => {
                 </a>
               </div>
 
-              <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-rust-brown" />
+              <div className="flex items-center gap-3 text-rust-brown">
+                <Phone className="w-5 h-5" />
+                <a href="tel:+97738540144" className="hover:underline">
+                  +977 38-540144
+                </a>
+              </div>
+
+              <div className="flex items-center gap-4 text-rust-brown">
                 <div className="flex gap-4">
-                  <a href="https://www.instagram.com/khumbulodge/" target="_blank" rel="noopener noreferrer" className=" flex items-center ">
+                  <a href="https://www.instagram.com/khumbulodge/" target="_blank" rel="noopener noreferrer" aria-label="Khumbu Lodge on Instagram" className=" flex items-center ">
                     <Instagram className="w-5 h-5 hover:opacity-50 transition-opacity" />
                   </a>
-                  <a href="https://www.facebook.com/KhumbuLodge" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <a href="https://www.facebook.com/KhumbuLodge" target="_blank" rel="noopener noreferrer" aria-label="Khumbu Lodge on Facebook" className="flex items-center">
                     <Facebook className="w-5 h-5 hover:opacity-50 transition-opacity" />
                   </a>
                 </div>

@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
             <img 
               src="/lovable-uploads/5fca111b-f362-4052-961d-1c72aa4f11c0.png" 
-              alt="Khuabu Lodge" 
+              alt="Khumbu Lodge" 
               className="h-20 sm:h-16 w-auto"
             />
           </div>
