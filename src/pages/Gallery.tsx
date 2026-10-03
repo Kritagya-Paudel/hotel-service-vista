@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { usePageTitle } from "@/hooks/usePageTitle";
 import Header from '@/components/about/Header';
 import { X } from 'lucide-react';
-import Footer from "@/components/Footer";
 import { useLenis } from '@/lib/lenis';
 
 declare global {

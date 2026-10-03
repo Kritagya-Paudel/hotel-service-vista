@@ -108,10 +108,10 @@ const Booking = () => {
             {/* Left Side - Contact Information */}
             <div className="space-y-8 ">
               <div>
-                <h1 className="text-5xl md:text-6xl font-serif text-rust-brown mb-4 font-BOONE">
+                <h1 className="text-5xl md:text-6xl font-serif text-primary mb-4 font-BOONE">
                   Get in Touch
                 </h1>
-                <p className="text-xl text-rust-brown/80 mb-6">
+                <p className="text-xl text-foreground mb-6">
                   I'd like to hear from you!
                 </p>
                 <p className="text-muted-foreground">
@@ -119,14 +119,14 @@ const Booking = () => {
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 text-rust-brown">
+              <div className="flex items-center gap-3 text-primary">
                 <Mail className="w-5 h-5" />
                 <a href="mailto:info@khumbulodge.com" className="hover:underline">
                   info@khumbulodge.com
                 </a>
               </div>
 
-              <div className="flex items-start gap-3 text-rust-brown">
+              <div className="flex items-start gap-3 text-primary">
                 <Phone className="w-5 h-5 mt-1 shrink-0" />
                 <div className="flex flex-col">
                   <a href="tel:+97738540144" className="hover:underline">
@@ -138,7 +138,7 @@ const Booking = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 text-rust-brown">
+              <div className="flex items-center gap-4 text-primary">
                 <div className="flex gap-4">
                   <a href="https://www.instagram.com/khumbulodge/" target="_blank" rel="noopener noreferrer" aria-label="Khumbu Lodge on Instagram" className=" flex items-center ">
                     <Instagram className="w-5 h-5 hover:opacity-50 transition-opacity" />

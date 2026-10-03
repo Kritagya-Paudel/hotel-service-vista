@@ -12,7 +12,8 @@ import Booking from "./pages/Booking";
 import Gallery from './pages/Gallery';
 import Rooms from './pages/Rooms';
 import Services from './pages/Services';
-import ScrollToTop from "./components/ScrollToTop";  // ← ADD THIS
+import ScrollToTop from "./components/ScrollToTop";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
         {/* ← PUT ScrollToTop HERE */}
         <ScrollToTop />
 
+        <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/stay/basic-standard-room" element={<SingleRoom />} />
@@ -39,6 +41,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </ErrorBoundary>
 
       </BrowserRouter>
       </LenisProvider>
