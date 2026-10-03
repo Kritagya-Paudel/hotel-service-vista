@@ -31,7 +31,7 @@ const WelcomeSection = () => {
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
               Now guided by the Sherpa family who founded it decades ago, Khumbu Lodge has changed little in spirit. The rooms are warmer, the meals heartier, yet the feeling endures: a home built for high mountain life, where trekkers are greeted with easy familiarity and cared for as if they’ve been here before.            </p>
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
-              Along the stairwell, old photographs trace the lodge’s beginnings—of early expeditions and dusty footpaths, of climbers and porters who shared stories long into the night. Their presence lingers still, not in grand displays, but in the crackle of the stove on cold mornings and the way the staff remember exactly when you like your tea.
+              Along the stairwell, old photographs trace the lodge’s beginnings: of early expeditions and dusty footpaths, of climbers and porters who shared stories long into the night. Their presence lingers still, not in grand displays, but in the crackle of the stove on cold mornings and the way the staff remember exactly when you like your tea.
             </p>
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed mb-6">
               Some lodges are made to impress. Khumbu Lodge was made to belong.

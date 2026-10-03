@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const NotFound = () => {
   const location = useLocation();
-  usePageTitle("Page not found — Khumbu Lodge");
+  usePageTitle("Page not found | Khumbu Lodge");
 
   useEffect(() => {
     console.error(
@@ -27,7 +27,7 @@ const NotFound = () => {
             404
           </h1>
           <p className="font-AvenirLight text-foreground/80 text-base md:text-lg mb-10 leading-relaxed">
-            This path doesn't lead anywhere — much like the trail above Namche when the cloud comes in. Let's get you back to the lodge.
+            This path doesn't lead anywhere, much like the trail above Namche when the cloud comes in. Let's get you back to the lodge.
           </p>
           <Link
             to="/"

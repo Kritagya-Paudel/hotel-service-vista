@@ -7,12 +7,11 @@ import SherpaLegacySection from "@/components/SherpaLegacySection";
 import RoomsSection from "@/components/RoomsSection";
 import ServicesSection from "@/components/ServicesSection";
 import TestimonialSection from "@/components/TestimonialSection";
-import HotelInformationSection from "@/components/HotelInformationSection";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
-  usePageTitle("Khumbu Lodge — Namche Bazaar, Everest Region", "A family-run Sherpa lodge in Namche Bazaar, welcoming trekkers and climbers since 1973.");
+  usePageTitle("Khumbu Lodge | Namche Bazaar, Everest Region", "A family-run Sherpa lodge in Namche Bazaar, welcoming trekkers and climbers since 1973.");
   useScrollReveal();
 
   return (
@@ -24,7 +23,6 @@ const Index = () => {
       <div className="reveal"><TestimonialSection /></div>
       <div className="reveal"><RoomsSection /></div>
       <div className="reveal"><ServicesSection /></div>
-      <div className="reveal"><HotelInformationSection /></div>
       <Footer />
     </div>
   );

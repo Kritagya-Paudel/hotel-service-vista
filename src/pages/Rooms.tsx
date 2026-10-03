@@ -4,7 +4,7 @@ import RoomsSection from "@/components/RoomsSection";
 import Footer from "@/components/Footer";
 
 const Rooms = () => {
-  usePageTitle("Rooms — Khumbu Lodge", "Basic Standard and Deluxe Double rooms at Khumbu Lodge, Namche Bazaar.");
+  usePageTitle("Rooms | Khumbu Lodge", "Basic Standard and Deluxe Double rooms at Khumbu Lodge, Namche Bazaar.");
   return (
     <div className="min-h-screen">
       <Header />

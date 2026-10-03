@@ -25,7 +25,7 @@ const SkiingSection = () => {
                       As one of the oldest family-run lodges in the Everest region, we pride ourselves on warm Sherpa hospitality and unmatched comfort. Whether you are acclimatizing on your way to Everest Base Camp or seeking a peaceful stay in Namche, our lodge offers the perfect retreat surrounded by the grandeur of the Himalayas.
                     </p>
                     <p className="text-sm md:text-base text-forest-green leading-relaxed">
-                      From our rooms, guests enjoy panoramic views of snow-capped peaks while experiencing a blend of tradition and modern amenities—making every stay both memorable and rejuvenating.
+                      From our rooms, guests enjoy panoramic views of snow-capped peaks while experiencing a blend of tradition and modern amenities, making every stay both memorable and rejuvenating.
                     </p>
                   </div>
                   <div className="p-4 md:p-8 lg:p-12 border-t lg:border-t-0 lg:border-l border-steel-blue/20">
@@ -33,7 +33,7 @@ const SkiingSection = () => {
                       Khumbu Lodge offers 54 rooms, ranging from standard accommodations to private ensuite options and furnished apartments for longer stays. Every room is designed to ensure comfort in the high-altitude environment of Namche Bazaar (3,443 m).
                     </p>
                     <p className="text-sm md:text-base text-forest-green mb-3 md:mb-4 leading-relaxed">
-                      Our restaurant serves authentic Sherpa cuisine alongside international favorites, with ingredients sourced locally and coffee brewed to perfection—all enjoyed with breathtaking views of Namche valley and the surrounding peaks.
+                      Our restaurant serves authentic Sherpa cuisine alongside international favorites, with ingredients sourced locally and coffee brewed to perfection, all enjoyed with breathtaking views of Namche valley and the surrounding peaks.
                     </p>
                     <p className="text-sm md:text-base text-forest-green mb-4 md:mb-8 leading-relaxed">
                       Over the years, Khumbu Lodge has hosted countless trekkers, volunteers, and climbers, earning a reputation as a home away from home in the heart of the Himalayas. Here, every guest is part of our family.

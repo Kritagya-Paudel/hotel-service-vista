@@ -34,6 +34,7 @@ const Footer = () => {
             <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-sky-blue">
               <li>Namche Bazaar, Nepal</li>
               <li>+977 38-540144</li>
+              <li>+977 38-540166</li>
               <li>info@khumbulodge.com</li>
             </ul>
           </div>

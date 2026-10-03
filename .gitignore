@@ -25,3 +25,8 @@ dist-ssr
 
 # Claude Code session data
 .claude/
+
+# Local env (contact form endpoint, etc.)
+.env
+.env.*
+!.env.example

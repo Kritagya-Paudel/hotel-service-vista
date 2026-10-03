@@ -31,6 +31,12 @@ const Footer = () => {
                   >
                     +977 38-540144
                   </a>
+                  <a
+                    href="tel:+97738540166"
+                    className="block text-background/70 hover:text-background transition-colors"
+                  >
+                    +977 38-540166
+                  </a>
                 </div>
               </div>
           </div>
@@ -53,7 +59,7 @@ const Footer = () => {
       <p className="font-AvenirLight text-background/75 max-w-md mb-8">
         Established in 1973, Khumbu Lodge has been a warm home to trekkers and climbers 
         on their journey to Everest. Over the decades, we have welcomed adventurers, 
-        dignitaries, and travelers from around the world — including former US President Jimmy Carter. 
+        dignitaries, and travelers from around the world, including former US President Jimmy Carter. 
         Here, hospitality meets the Himalayas.
       </p>
       

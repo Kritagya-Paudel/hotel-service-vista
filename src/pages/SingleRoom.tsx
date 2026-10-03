@@ -13,17 +13,16 @@ const allRooms = [
     title: 'Basic Standard Room',
     subtitle: 'Simple comfort, warmly kept.',
     heroImage: '/lovable-uploads/rooms/basic-standard-01.jpeg',
-    badges: ['1 Bed', '1-2 Guests', 'Attached Bath'],
-    overviewHeading: "A quiet, well-kept private room with a comfortable bed and an attached bathroom with running hot water \u2014 everything you need after a day on the trail.",
+    badges: ['1 Bed', '1-2 Guests'],
+    overviewHeading: "A quiet, well-kept private room with a comfortable bed and warm wood panelling, kept simple on purpose and looked after with care.",
     overviewBody: [
       "Our standard rooms are the heart of the lodge: warm wood panelling, crisp white linen, and a bed made up fresh each morning. They are the rooms trekkers come back to season after season, kept simple on purpose and looked after with care.",
-      "Each room has its own bathroom with running hot water, reading lamps at the bedside, and a window onto Namche. Ideal for solo walkers and couples spending a night or two acclimatising before heading further up the valley.",
+      "Reading lamps at the bedside, a luggage rack, and a window onto Namche. Ideal for solo walkers and couples spending a night or two acclimatising before heading further up the valley.",
     ],
     carouselImages: [
-      { src: '/lovable-uploads/rooms/basic-standard-01.jpeg', label: 'Basic Standard Room', caption: 'Comfortable Bed' },
-      { src: '/lovable-uploads/rooms/basic-standard-02.jpeg', label: 'Basic Standard Room', caption: 'Warm Wooden Interior' },
+      { src: '/lovable-uploads/rooms/basic-standard-01.jpeg', label: 'Basic Standard Room', caption: 'Twin Beds and Windows onto Namche' },
     ],
-    amenities: ['Attached bathroom with running hot water', 'Fresh linen and warm bedding', 'Wood-panelled interior', 'Bedside reading lamps', 'Luggage rack', 'Daily housekeeping', 'Wi-Fi available', 'Charging points', 'Dining room meals', 'Hot drinks service'],
+    amenities: ['Fresh linen and warm bedding', 'Wood-panelled interior', 'Bedside reading lamps', 'Luggage rack', 'Daily housekeeping', 'Wi-Fi available', 'Charging points', 'Dining room meals', 'Hot drinks service'],
   },
   {
     path: '/stay/deluxe-double-room',
@@ -34,7 +33,7 @@ const allRooms = [
     overviewHeading: "Our largest rooms, with two beds, a sitting area by the window, and views out over Namche Bazaar.",
     overviewBody: [
       "The deluxe rooms give you space to spread out: two full beds, corner windows on two walls, and armchairs set around a low table where the afternoon light comes in. Good for friends travelling together, families, or anyone settling in for a few days.",
-      "Like every room at the lodge, they come with an attached bathroom and running hot water, and the same Sherpa hospitality that has kept guests returning to Namche since 1973.",
+      "They come with an attached bathroom and running hot water, and the same Sherpa hospitality that has kept guests returning to Namche since 1973.",
     ],
     carouselImages: [
       { src: '/lovable-uploads/rooms/deluxe-double-01.jpeg', label: 'Deluxe Double Room', caption: 'Two Beds, Made Up Fresh' },
@@ -52,7 +51,7 @@ const SingleRoom = () => {
   const { pathname } = useLocation();
   const room = allRooms.find(r => r.path === pathname) ?? allRooms[0];
   const otherRooms = allRooms.filter(r => r.path !== pathname);
-  usePageTitle(`${room.title} — Khumbu Lodge`, room.overviewHeading);
+  usePageTitle(`${room.title} | Khumbu Lodge`, room.overviewHeading);
 
   return (
     <div className="min-h-screen bg-background">
@@ -61,7 +60,7 @@ const SingleRoom = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex overflow-hidden">
+      <section className="relative h-screen-safe flex overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url('${room.heroImage}')` }}
@@ -69,22 +68,22 @@ const SingleRoom = () => {
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
-        <div className="relative z-10 w-full h-full flex flex-col items-center justify-between text-white px-4 py-6">
+        <div className="relative z-10 w-full h-full flex flex-col items-center justify-between text-white px-4 pt-32 pb-12 md:pt-36 md:pb-16">
           {/* Spacer so title sits in the upper-middle */}
           <div className="flex-1 flex items-center justify-center">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl tracking-wide font-BOONE text-center">
+            <h1 className="text-[2.75rem] leading-[1.05] sm:text-6xl md:text-8xl tracking-wide font-BOONE text-center">
               {room.title}
             </h1>
           </div>
 
           {/* Bottom info */}
-          <div className="w-full flex flex-col items-center gap-3 pb-4">
+          <div className="w-full flex flex-col items-center gap-4">
             <p className="text-lg sm:text-2xl md:text-4xl font-light italic font-AvenirLight text-center px-4">
               {room.subtitle}
             </p>
             <div className="flex flex-wrap justify-center gap-[3px] font-AvenirLight">
               {room.badges.map((badge, i) => (
-                <div key={i} className="border text-white px-3 py-1 border-dashed border-white text-sm md:text-base">
+                <div key={i} className="border text-white px-3 py-1 border-dashed border-white text-[13px] sm:text-sm md:text-base">
                   {badge}
                 </div>
               ))}
@@ -95,14 +94,14 @@ const SingleRoom = () => {
 
       {/* Overview Section */}
       <section className="min-h-screen bg-white flex flex-col">
-        <div className="flex-1 px-8 lg:px-16 py-16">
+        <div className="flex-1 px-5 sm:px-8 lg:px-16 py-12 md:py-16">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
               <p className="text-sm uppercase tracking-wider text-muted-foreground">OVERVIEW</p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 md:mb-16">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-serif text-primary font-BOONE leading-tight mb-8">
+                <h2 className="text-[1.75rem] sm:text-3xl lg:text-4xl text-primary font-BOONE leading-tight mb-6 md:mb-8">
                   {room.overviewHeading}
                 </h2>
                 <Button asChild className="bg-ocean-blue hover:bg-steel-blue text-white rounded-none px-3 md:px-6 text-sm">
@@ -118,6 +117,23 @@ const SingleRoom = () => {
 
         {/* Room Carousel */}
         <div className="relative w-full">
+          {/* One photo has nothing to page through, and inside a peeking
+              carousel it sat off to the left. Show it centred instead. */}
+          {room.carouselImages.length === 1 ? (
+            <div className="w-full max-w-5xl mx-auto px-4 sm:px-6">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                <img
+                  src={room.carouselImages[0].src}
+                  alt={room.carouselImages[0].label}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                  <h3 className="text-white text-2xl md:text-3xl font-BOONE">{room.carouselImages[0].label}</h3>
+                  <p className="text-white/90 text-sm mt-1 font-AvenirBlack">{room.carouselImages[0].caption}</p>
+                </div>
+              </div>
+            </div>
+          ) : (
           <Carousel className="w-full" opts={{ loop: true, align: 'center' }}>
             <CarouselContent className="-ml-4">
               {room.carouselImages.map((img, i) => (
@@ -132,11 +148,14 @@ const SingleRoom = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute bottom-8 right-8 flex gap-2 z-10">
-              <CarouselPrevious className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
-              <CarouselNext className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
+            {/* Arrows sit under the strip: over the slides they landed on top of
+                the captions, and on a phone there was nowhere to put a thumb. */}
+            <div className="flex justify-end gap-2 px-5 sm:px-8 lg:px-16 mt-4">
+              <CarouselPrevious className="static translate-y-0 h-10 w-10 bg-background/90 hover:bg-background border-primary text-primary" />
+              <CarouselNext className="static translate-y-0 h-10 w-10 bg-background/90 hover:bg-background border-primary text-primary" />
             </div>
           </Carousel>
+          )}
         </div>
       </section>
 
@@ -150,23 +169,23 @@ const SingleRoom = () => {
         >
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
-        <div className="relative z-10 container mx-auto px-6 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 container mx-auto px-5 sm:px-6 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <p className="text-white text-sm uppercase tracking-wider mb-4">{room.title.toUpperCase()}</p>
-              <h3 className="text-white text-5xl md:text-6xl font-serif leading-tight">
+              <p className="font-AvenirLight text-white text-xs sm:text-sm uppercase tracking-[0.25em] mb-4">{room.title.toUpperCase()}</p>
+              <h3 className="font-Editorial text-white text-4xl sm:text-5xl md:text-6xl leading-tight">
                 Features<br />
                 <span className="italic font-light">&amp; Amenities</span>
               </h3>
             </div>
             <div className="bg-white font-AvenirLight border-1 border-ocean-blue p-1">
-              <div className="bg-background border-[5px] border-double border-destructive border-ocean-blue p-8 shadow-2xl">
+              <div className="bg-background border-[5px] border-double border-ocean-blue p-5 sm:p-8 shadow-2xl">
                 <h4 className="text-center text-foreground text-sm font-medium mb-8 uppercase tracking-wider">
                   INCLUDED IN YOUR ROOM
                 </h4>
-                <ul className="space-y-4">
+                <ul className="space-y-2 sm:space-y-4">
                   {room.amenities.map((amenity, i) => (
-                    <li key={i} className="text-foreground text-base py-2 border-b border-muted/30 last:border-b-0">
+                    <li key={i} className="text-foreground text-[15px] sm:text-base py-2 border-b border-muted/30 last:border-b-0">
                       {amenity}
                     </li>
                   ))}
@@ -185,8 +204,8 @@ const SingleRoom = () => {
               Other Rooms
             </h2>
             <div className="gap-x-7 gap-y-7 justify-start items-center w-full flex mt-7 mb-10 md:mb-24 flex-col lg:w-4/5">
-              <p className="text-forest-green text-[19.2px] leading-[23.04px] font-normal tracking-[-0.192px] text-center my-0 sm:tracking-[-0.025rem] font-AvenirBlack">
-                Choose from 20 rooms with attached bathrooms and running hot water for extra comfort, 25 budget-friendly private rooms, or 9 fully furnished apartments ideal for long-term stays, volunteers, and trekkers.
+              <p className="text-forest-green text-[17px] sm:text-[19.2px] leading-[1.45] font-normal tracking-[-0.192px] text-center my-0 sm:tracking-[-0.025rem] font-AvenirLight">
+                Choose from 25 rooms with attached bathrooms and running hot water for extra comfort, 20 budget-friendly private rooms, or 9 fully furnished apartments ideal for long-term stays, volunteers, and trekkers.
               </p>
             </div>
           </div>
@@ -229,9 +248,11 @@ const SingleRoom = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute bottom-8 right-8 flex gap-2 z-10">
-              <CarouselPrevious className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
-              <CarouselNext className="static translate-y-0 bg-background/80 hover:bg-background border-[#ad1a1a] text-[#ad1a1a]" />
+            {/* Arrows sit under the strip: over the slides they landed on top of
+                the captions, and on a phone there was nowhere to put a thumb. */}
+            <div className="flex justify-end gap-2 px-5 sm:px-8 lg:px-16 mt-4">
+              <CarouselPrevious className="static translate-y-0 h-10 w-10 bg-background/90 hover:bg-background border-primary text-primary" />
+              <CarouselNext className="static translate-y-0 h-10 w-10 bg-background/90 hover:bg-background border-primary text-primary" />
             </div>
           </Carousel>
         </div>

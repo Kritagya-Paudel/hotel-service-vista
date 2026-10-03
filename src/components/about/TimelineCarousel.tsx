@@ -83,8 +83,8 @@ const TimelineCarousel = () => {
       labels: ["LODGE ESTABLISHED", "LIBRARY BUILT", "VISIT BY PRESIDENT JIMMY CARTER", "EXPANSION PROJECT", "MODERNIZATION"],
       images: [
         { 
-          src: "/lovable-uploads/rooms/basic-standard-01.jpeg", 
-          alt: "A refreshed standard room", 
+          src: "/lovable-uploads/rooms/basic-standard-02.jpeg", 
+          alt: "A guest room at the lodge", 
           className: "absolute top-1/3 right-1/4 w-28 h-20 md:w-40 md:h-28 lg:w-52 lg:h-36 rotate-[12deg] z-10" 
         },
         { 

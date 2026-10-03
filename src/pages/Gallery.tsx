@@ -12,18 +12,25 @@ declare global {
 }
 
 const Gallery = () => {
-  usePageTitle("Gallery — Khumbu Lodge", "Photographs of Khumbu Lodge and Namche Bazaar.");
+  usePageTitle("Gallery | Khumbu Lodge", "Photographs of Khumbu Lodge and Namche Bazaar.");
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollInstance = useRef<any>(null);
   const [overlayImage, setOverlayImage] = useState<string | null>(null);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const lenis = useLenis();
+  const [locomotiveFailed, setLocomotiveFailed] = useState(false);
 
-  // Locomotive drives the horizontal scroll here, so Lenis has to stand down.
+  // Locomotive drives the horizontal scroll here, so Lenis has to stand down —
+  // but only while Locomotive is actually running. If its CDN never answers we
+  // hand scrolling back, otherwise the page is a dead screen you can't move.
   useEffect(() => {
+    if (locomotiveFailed) {
+      lenis?.start();
+      return;
+    }
     lenis?.stop();
     return () => lenis?.start();
-  }, [lenis]);
+  }, [lenis, locomotiveFailed]);
 
   useEffect(() => {
     // Load locomotive scroll CSS
@@ -35,19 +42,34 @@ const Gallery = () => {
     // Load locomotive scroll JS
     const locomotiveJS = document.createElement('script');
     locomotiveJS.src = 'https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js';
+    let settled = false;
+    const giveUp = () => {
+      if (settled) return;
+      settled = true;
+      setLocomotiveFailed(true);
+    };
+
     locomotiveJS.onload = () => {
+      if (settled) return;
+      settled = true;
       if (scrollRef.current && window.LocomotiveScroll) {
         initializeScroll();
+      } else {
+        setLocomotiveFailed(true);
       }
     };
+    locomotiveJS.onerror = giveUp;
+    // Blocked or very slow CDN: stop waiting and fall back to native scrolling.
+    const timeout = window.setTimeout(giveUp, 6000);
     document.head.appendChild(locomotiveJS);
 
     return () => {
+      window.clearTimeout(timeout);
       if (scrollInstance.current) {
         scrollInstance.current.destroy();
       }
-      document.head.removeChild(locomotiveCSS);
-      document.head.removeChild(locomotiveJS);
+      locomotiveCSS.remove();
+      locomotiveJS.remove();
     };
   }, []);
 
@@ -110,7 +132,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-200 overflow-hidden">
+    <div className={`min-h-screen bg-gray-200 ${locomotiveFailed ? "overflow-x-auto" : "overflow-hidden"}`}>
       <Header />
       
       
@@ -279,7 +301,7 @@ const Gallery = () => {
         .scroll-animations-example > .scrollsection > .item.-small:nth-of-type(4n) {
           bottom: -13vh;
         }
-        /* Tiles overlap by design — the hovered one has to come to the front,
+        /* Tiles overlap by design: the hovered one has to come to the front,
            so this must sit after the .-normal / .-small z-index rules above. */
         .scroll-animations-example > .scrollsection > .item:hover {
           z-index: 30;

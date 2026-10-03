@@ -18,7 +18,7 @@ const HeartOfHimalayasSection = () => {
           <br />
           <em className="italic">Himalayas</em>
         </h2>
-        <p className="font-AvenirLight text-xs md:text-sm uppercase tracking-[0.35em]">
+        <p className="font-AvenirLight text-[0.65rem] sm:text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.35em]">
           Rare beauty and enduring tradition
         </p>
       </div>

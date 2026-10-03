@@ -35,21 +35,21 @@ const FounderSection = () => {
             </div>
           </div>
           <figcaption className="font-AvenirLight text-xs md:text-sm text-steel-blue text-center mt-3 md:mt-4 italic">
-            Pasang Kami Sherpa — known throughout the Khumbu simply as PK
+            Pasang Kami Sherpa, known throughout the Khumbu simply as PK
           </figcaption>
         </figure>
 
         {/* Story, set in two columns so neither side runs long */}
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 lg:gap-14">
           <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed first-letter:font-BOONE first-letter:text-5xl md:first-letter:text-6xl first-letter:text-ocean-blue first-letter:float-left first-letter:mr-2 first-letter:mt-1 first-letter:leading-[0.85]">
-            Pasang Kami Sherpa (PK) was born in the Khumbu region and grew up in the shadow of Chomolungma, Mother Goddess of the Earth — Mount Everest. In 1965 he became one of the few select Sherpas to begin working with Jimmy Roberts in his new venture, one that was to become a leading tourist industry for the Kingdom of Nepal: trekking.
+            Pasang Kami Sherpa (PK) was born in the Khumbu region and grew up in the shadow of Chomolungma, Mother Goddess of the Earth, Mount Everest. In 1965 he became one of the few select Sherpas to begin working with Jimmy Roberts in his new venture, one that was to become a leading tourist industry for the Kingdom of Nepal: trekking.
           </p>
           <div className="space-y-4 md:space-y-6">
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
-              His career reads like a history of Himalayan mountaineering itself — high altitude Sherpa on the Indian Everest expeditions and in Langtang, then assistant to Schneider in 1964 during the data collection in the extremely rugged Hinko region for the now famous Schneider topographical maps.
+              His career reads like a history of Himalayan mountaineering itself: high altitude Sherpa on the Indian Everest expeditions and in Langtang, then assistant to Schneider in 1964 during the data collection in the extremely rugged Hinko region for the now famous Schneider topographical maps.
             </p>
             <p className="font-AvenirLight text-sm md:text-base text-forest-green leading-relaxed">
-              From there he served as Sardar on expedition after expedition, leading the Sherpa teams that carried some of the great Himalayan climbs of the era — and the list goes on.
+              From there he served as Sardar on expedition after expedition, leading the Sherpa teams that carried some of the great Himalayan climbs of the era, and the list goes on.
             </p>
           </div>
         </div>

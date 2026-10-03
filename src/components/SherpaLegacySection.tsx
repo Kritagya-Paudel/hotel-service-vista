@@ -18,11 +18,11 @@ const SherpaLegacySection = () => {
 
         <div className="font-AvenirLight space-y-6 text-foreground max-w-2xl mx-auto">
           <p className="text-base md:text-lg leading-relaxed">
-            Since 1973, Khumbu Lodge has stood as a beacon of warmth and tradition in Namche Bazaar—the vibrant gateway to Everest.
+            Since 1973, Khumbu Lodge has stood as a beacon of warmth and tradition in Namche Bazaar, the vibrant gateway to Everest.
           </p>
 
           <p className="text-base md:text-lg leading-relaxed">
-            Family-run for over four decades, it has welcomed trekkers, climbers, and adventurers from around the world, offering comfort, culture, and a sense of home at 3,443 meters above sea level. Khumbu Lodge is more than just a place to rest—it's a gateway to adventure and a testament to the enduring spirit of the Himalayas.
+            Family-run for over four decades, it has welcomed trekkers, climbers, and adventurers from around the world, offering comfort, culture, and a sense of home at 3,443 meters above sea level. Khumbu Lodge is more than just a place to rest; it's a gateway to adventure and a testament to the enduring spirit of the Himalayas.
           </p>
         </div>
 

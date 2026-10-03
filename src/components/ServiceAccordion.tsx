@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Utensils, Plane, BookOpen, WashingMachine, Wifi, Package, ShoppingBag, Droplets, Info } from 'lucide-react';
+import { Utensils, Coffee, BookOpen, Stethoscope, WashingMachine, Wifi, Package, Plane, Droplets, Info } from 'lucide-react';
 
 const services = [
   {
@@ -16,12 +16,10 @@ const services = [
     content: `Serving Sherpa delicacies to international cuisine, our restaurant offers a diverse culinary experience complemented by fresh local coffee and Lavazza coffee. Guests can relax in a comfortable seating arrangement while enjoying access to a well-stocked library and Wi-Fi. And of course, you’ll be treated to the best view in all of Namche.`
   },
   {
-    id: 'heli-rescue',
-    title: 'Heli Rescue & Sight Seeing',
-    icon: Plane,
-    content: `Ticketing and booking reconfirmation while you are in Namche or anywhere else in Sagarmatha National Park. 
-In case you need a rescue or need to change or book your air ticket, we will do that. 
-We also provide heli sight seeing.`
+    id: 'himalayan-java',
+    title: 'Himalayan Java',
+    icon: Coffee,
+    content: `Nepal’s finest coffee franchise, Himalayan Java, sits on the same premises, so a proper espresso, cappuccino or flat white is a few steps from your room. Freshly roasted Nepali beans, at 3,440 metres.`
   },
   {
     id: 'mini-library',
@@ -30,30 +28,35 @@ We also provide heli sight seeing.`
     content: `For those guests staying here for an acclimatization day, enjoy reading a large collection of books on mountaineering, Sherpa culture, and Buddhism.`
   },
   {
-    id: 'laundry',
-    title: 'Laundry',
-    icon: WashingMachine,
-    content: `Quick laundry service is available for our guests.`
+    id: 'doctors-on-call',
+    title: 'Doctors on Call',
+    icon: Stethoscope,
+    content: `We own the hospital in Namche, so a doctor can be called to the lodge whenever a guest needs one, day or night. Altitude sickness, minor injuries and trail ailments can all be looked at without you going anywhere.`
   },
   {
-    id: 'communication',
-    title: 'Communication',
+    id: 'laundry',
+    title: 'Laundry on Command',
+    icon: WashingMachine,
+    content: `Quick laundry service on request. Hand it in and have it back clean and dry, ready for the next leg of the trek.`
+  },
+  {
+    id: 'wifi',
+    title: 'Complimentary Wi-Fi',
     icon: Wifi,
-    content: `Khumbu Lodge is the first to introduce Internet and Wi-Fi facilities in Namche using V-SAT technology. 
-We also have a postal service facility for our hotel guests.`
+    content: `Wi-Fi is complimentary for all our guests. Khumbu Lodge was the first to bring Internet to Namche, using V-SAT technology, and we still keep guests connected today. A postal service is also available for hotel guests.`
   },
   {
     id: 'storage',
-    title: 'Storage',
+    title: 'Complimentary Storage',
     icon: Package,
-    content: `You can have your own storage facility while you trek higher up in the mountain.`
+    content: `Leave what you don’t need with us, free of charge, while you trek higher up the mountain, and collect it on your way back down.`
   },
   {
-    id: 'valley-shop',
-    title: 'Valley Shop',
-    icon: ShoppingBag,
-    content: `Khumbu Valley shop has almost everything needed for trekkers. 
-Those who are staying in the lodge will get the best deal.`
+    id: 'helicopter',
+    title: 'Helicopter Charter & Flight Ticketing',
+    icon: Plane,
+    content: `Ticketing and booking reconfirmation while you are in Namche or anywhere else in Sagarmatha National Park.
+If you need to change or book an air ticket, we will do that. We also arrange helicopter charters, including sightseeing flights over the Khumbu.`
   },
   {
     id: 'uv-filter',
@@ -63,9 +66,9 @@ Those who are staying in the lodge will get the best deal.`
   },
   {
     id: 'free-info',
-    title: 'Free Information',
+    title: 'Free Local Information',
     icon: Info,
-    content: `Free information on trekking and altitude sickness.`
+    content: `Liquid gold information that you cannot find on the internet, straight from the owner himself. Trekking routes, altitude sickness, weather, what is actually open further up the valley.`
   }
 ];
 
@@ -81,10 +84,10 @@ export const ServiceAccordion = () => {
               value={service.id}
               className="border-background/20 hover:border-background/40 transition-colors"
             >
-              <AccordionTrigger className="text-left hover:no-underline group py-6 [&>svg]:text-white">
-                <div className="flex items-center space-x-4">
-                  <IconComponent className="h-5 w-5 text-background/60 group-hover:text-background transition-colors" />
-                  <span className="font-AvenirLight text-background uppercase tracking-[0.15em] text-sm md:text-base group-hover:text-background transition-colors">
+              <AccordionTrigger className="text-left hover:no-underline group py-6 gap-3 pr-1 [&>svg]:text-white">
+                <div className="flex items-center space-x-3 sm:space-x-4 min-w-0">
+                  <IconComponent className="h-5 w-5 shrink-0 text-background/60 group-hover:text-background transition-colors" />
+                  <span className="font-AvenirLight text-background uppercase tracking-[0.1em] sm:tracking-[0.15em] text-[13px] sm:text-sm md:text-base group-hover:text-background transition-colors">
                     {service.title}
                   </span>
                 </div>

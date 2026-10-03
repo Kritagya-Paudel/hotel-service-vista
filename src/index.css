@@ -95,6 +95,40 @@ All colors MUST be HSL.
   }
 }
 
+/* Full-viewport sections that account for mobile browser chrome.
+   svh is the viewport with the URL bar showing, so nothing gets hidden
+   behind it the way 100vh does on iOS and Android. */
+.h-screen-safe {
+  height: 100vh;
+  height: 100svh;
+}
+.min-h-screen-safe {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Browsers that still draw a classic scrollbar were covering content at the
+   right edge. Keep it thin and quiet instead; touch browsers ignore this and
+   use their own overlay scrollbar. */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--secondary) / 0.45) transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--secondary) / 0.45);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary) / 0.7);
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;

@@ -18,12 +18,12 @@ const ServicesSection = () => {
             <em className="italic">in your stay?</em>
           </h2>
           <p className="font-AvenirLight text-background/75 max-w-2xl mx-auto text-lg leading-relaxed">
-            A stay at Khumbu Lodge offers more than just a room—it’s an immersion into the heart of the Himalayas. Savor authentic Sherpa hospitality, enjoy hearty meals, and unwind with modern comforts, all while surrounded by breathtaking mountain views.
+            A stay at Khumbu Lodge offers more than just a room; it’s an immersion into the heart of the Himalayas. Savor authentic Sherpa hospitality, enjoy hearty meals, and unwind with modern comforts, all while surrounded by breathtaking mountain views.
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="font-AvenirLight grid lg:grid-cols-2 gap-8 lg:gap-12 items-start min-h-[500px]">
+        <div className="font-AvenirLight grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:min-h-[500px]">
           {/* Services Accordion - Left Side */}
           <div className="order-2 lg:order-1 flex flex-col justify-start">
             <ServiceAccordion />

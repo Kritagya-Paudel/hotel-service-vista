@@ -10,7 +10,7 @@ import TimelineCarousel from "@/components/about/TimelineCarousel";
 import Footer from "@/components/Footer";
 
 const About = () => {
-  usePageTitle("Our Story — Khumbu Lodge", "The story of Khumbu Lodge and its founder, Pasang Kami Sherpa, in Namche Bazaar since 1973.");
+  usePageTitle("Our Story | Khumbu Lodge", "The story of Khumbu Lodge and its founder, Pasang Kami Sherpa, in Namche Bazaar since 1973.");
   return (
     <div className="min-h-screen bg-light-blue text-ocean-blue">
       <Header />

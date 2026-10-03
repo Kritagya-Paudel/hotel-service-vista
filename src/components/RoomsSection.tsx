@@ -8,18 +8,16 @@ const rooms = [
     title: 'Basic Standard Room',
     subtitle: 'Simple comfort, warmly kept.',
     image: '/lovable-uploads/rooms/basic-standard-01.jpeg',
-    description: 'A quiet, well-kept private room with a comfortable bed, wood-panelled walls, and an attached bathroom with running hot water — everything you need after a day on the trail.',
+    description: 'A quiet, well-kept private room with a comfortable bed and wood-panelled walls. Simple on purpose, looked after with care, and everything you need after a day on the trail.',
     link: '/stay/basic-standard-room',
-    badges: ['1 Bed', '1-2 Guests', 'Attached Bath']
   },
   {
     id: 'deluxe-double-room',
     title: 'Deluxe Double Room',
     subtitle: 'More space, more light, room for two.',
     image: '/lovable-uploads/rooms/deluxe-double-01.jpeg',
-    description: 'Our largest rooms, with two beds, a sitting area by the window, and views over Namche — ideal for friends, families, or anyone who likes room to spread out.',
+    description: 'Our largest rooms, with two beds, a sitting area by the window, and views over Namche. Ideal for friends, families, or anyone who likes room to spread out.',
     link: '/stay/deluxe-double-room',
-    badges: ['2 Beds', '2-3 Guests', 'Mountain Views']
   },
 ];
 
@@ -50,7 +48,7 @@ const RoomsSection = () => {
           {/* Description */}
           <div className="font-AvenirLight gap-x-7 gap-y-7 justify-start items-center w-full flex mt-7 mb-10 md:mb-24 flex-col lg:w-[42vw]">
             <p className="text-foreground text-[19.2px] leading-[23.04px] font-normal tracking-[-0.192px] text-center my-0 sm:tracking-[-0.025rem]">
-              Choose from 20 rooms with attached bathrooms and running hot water for extra comfort, 25 budget-friendly private rooms, or 9 fully furnished apartments ideal for long-term stays, volunteers, and trekkers.
+              Choose from 25 rooms with attached bathrooms and running hot water for extra comfort, 20 budget-friendly private rooms, or 9 fully furnished apartments ideal for long-term stays, volunteers, and trekkers.
             </p>
           </div>
         </div>
@@ -65,7 +63,7 @@ const RoomsSection = () => {
                 to={room.link}
                 className="bg-[rgba(0,0,0,0)] max-w-full flex text-primary no-underline gap-x-6 gap-y-6 justify-start items-start w-full flex-col group"
               >
-                {/* Room image with badges */}
+                {/* Room image */}
                 <div className="aspect-[3/2] w-full relative overflow-hidden">
                   <img
                     className="align-middle max-w-none inline-block object-cover w-full h-[100%] sm:h-[110%] lg:h-[112%] border-0 transition-transform duration-500 scale-100 lg:group-hover:scale-105"
@@ -73,20 +71,6 @@ const RoomsSection = () => {
                     loading="lazy"
                     src={room.image}
                   />
-
-                  
-                  {/* Badges overlay */}
-                  <div className="gap-[3px] bg-background justify-center items-center flex z-[5] absolute bottom-0 left-0 pt-0.5 pb-0 sm:top-0 sm:bottom-auto sm:pt-0 sm:pb-0.5">
-                    {room.badges.map((badge, index) => (
-                      <div
-                        key={index}
-                        className="border text-primary px-[0.8rem] py-[0.3rem] border-dashed border-primary lg:text-[15.2px]"
-                      >
-                        <div>{badge}</div>
-                      </div>
-                    ))}
-                  </div>
-
                 </div>
 
                 {/* Room content */}
